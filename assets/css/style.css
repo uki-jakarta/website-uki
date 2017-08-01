@@ -1,0 +1,156 @@
+
+/* 
+    Created on : July 28, 2017, 2:30:59 PM
+    Author     : EvyHernyta
+*/
+html,body{
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(232, 232, 232,0.2);
+}
+
+.dark-primary-color{
+    background-color: rgba(46, 49, 146, 1);
+    color: #ffffff; 
+}
+
+.primary-color{
+    background-color: rgba(44, 22, 105,1);
+    color:#ffffff;
+}
+
+.secondary-color{
+    background-color: #034f84;
+    color: #ffffff;
+}
+
+.primary-text-color{
+    color: #202020; 
+}
+
+.dark-primary-text-color{
+    color: #002020; 
+}
+.tertiary-color{
+    background-color: #92a8d1;
+    color: #ffffff;
+}
+
+.accent-color{
+    background-color: #027fb1;
+    color: #ffffff;
+}
+
+.subheader{
+    /*background-color: rgba(0, 0, 102,1);*/
+    /* background-color: rgba(62, 39, 128,1); */
+    background-color: rgba(2, 145, 202, 1);
+    /*background-color: rgba(66, 134, 244,0.5);*/
+    text-align: center;
+    z-index: 1;
+}
+
+.sublink{
+    color: #ffffff;
+    padding: 5px 5px;
+    font-size: 10pt;
+}
+
+.sublink-text{
+    color: #ffffff;
+    padding: 5px 5px;
+    font-size: 10pt;
+}
+
+.sublink-text + .sublink-text{
+    color: #ffffff;
+    padding: 5px 5px;
+    border-left-color: rgba(232, 232, 232, 1);
+    border-left-width: thin;
+    border-left-style: solid;
+}
+
+.mainheader{
+    background-color: rgba(232, 232, 232, 0.1);
+    color: #002020;
+}
+
+.wrapper{
+    min-height: 80%;
+}
+.brand{
+    font-family: "Baskerville Old Face", "Berlin Sans Fb", Arial;
+    font-size: 13pt;
+    font-weight: bold;
+    font-variant-caps: small-caps;
+    color: #ffffff;
+}
+
+.navbar-brand {
+    padding: 0;
+}
+.menulink{
+    padding: 0 3rem;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+    color: rgba(46, 49, 146, 1);
+    z-index: 1;
+}
+.navbar-light .navbar-nav .nav-link{
+    color: rgba(44, 22, 105,1);
+    text-align: right;
+}
+
+.navbar-toggler-right{
+    margin-top: 1.5rem;
+    padding-bottom: 0;
+}
+
+/*header{
+    border-bottom: rgba(2, 145, 202, 1);
+    border-bottom-style: solid;
+    border-bottom-width: thick;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}*/
+
+.dd-fw{
+    min-width: 100%;
+    clear: both;
+    overflow: hidden;
+
+}
+
+.dropdown-item{
+    white-space: normal;
+}
+
+.dd-megamenu{
+    position: static !important;
+}
+
+.item-head{
+    font-weight: bold;
+    padding-left: 1.5rem;
+    margin-top: .3rem;
+}
+
+.item-child{
+    padding-left: 2.5rem;
+}
+
+.dd-one-col{
+    min-width: 15rem;
+}
+
+.dropdown-menu{
+    line-height: 1rem;
+    font-size: 11pt;
+    border-radius: 0;
+}
+
+.dropdown-divider{
+    margin:0;
+}
