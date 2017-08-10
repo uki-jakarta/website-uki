@@ -4,10 +4,10 @@
     Author     : EvyHernyta
 */
 html,body{
-    min-height: 100%;
-    height: 100%;
-    width: 100%;
+    min-height:100%;
     background-color: rgba(232, 232, 232,0.2);
+    font-family: Roboto, 'Open Sans', sans-serif;
+    line-height: 1;
 }
 
 .dark-primary-color{
@@ -33,12 +33,12 @@ html,body{
     color: #002020; 
 }
 .tertiary-color{
-    background-color: #92a8d1;
+    background-color: rgba(46, 49, 146, 0.85);
     color: #ffffff;
 }
 
 .accent-color{
-    background-color: #027fb1;
+    background-color: rgba(46, 49, 146, 0.45);
     color: #ffffff;
 }
 
@@ -49,6 +49,7 @@ html,body{
     /*background-color: rgba(66, 134, 244,0.5);*/
     text-align: center;
     z-index: 1;
+    line-height: 1.5;
 }
 
 .sublink{
@@ -77,19 +78,14 @@ html,body{
 }
 
 .wrapper{
-    min-height: 80%;
-}
-.brand{
-    font-family: "Baskerville Old Face", "Berlin Sans Fb", Arial;
-    font-size: 13pt;
-    font-weight: bold;
-    font-variant-caps: small-caps;
-    color: #ffffff;
+    min-height: 100%;
+    background-color: rgba(232, 232, 232,0.2);
 }
 
 .navbar-brand {
     padding: 0;
 }
+
 .menulink{
     padding: 0 3rem;
     height: 50px;
@@ -97,6 +93,7 @@ html,body{
     font-weight: bold;
     color: rgba(46, 49, 146, 1);
     z-index: 1;
+    font-size: 90%;
 }
 .navbar-light .navbar-nav .nav-link{
     color: rgba(44, 22, 105,1);
@@ -108,14 +105,6 @@ html,body{
     padding-bottom: 0;
 }
 
-/*header{
-    border-bottom: rgba(2, 145, 202, 1);
-    border-bottom-style: solid;
-    border-bottom-width: thick;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}*/
-
 .dd-fw{
     min-width: 100%;
     clear: both;
@@ -125,6 +114,7 @@ html,body{
 
 .dropdown-item{
     white-space: normal;
+    font-size: 9pt;
 }
 
 .dd-megamenu{
@@ -143,6 +133,17 @@ html,body{
 
 .dd-one-col{
     min-width: 15rem;
+    margin-top: 2rem;
+}
+
+.dd-two-col{
+    min-width: 30rem;
+    margin-top: 2rem;
+}
+
+.dd-three-col{
+    min-width: 45rem;
+    margin-left: 20rem;
 }
 
 .dropdown-menu{
@@ -153,4 +154,357 @@ html,body{
 
 .dropdown-divider{
     margin:0;
+}
+
+.carousel-item.active {
+    display:block;
+}
+
+.carousel-item {
+    /*    height: 60vh;*/
+    min-height: 100px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.carousel-item > .img-fluid{
+    width: 100%;
+}
+
+.text-carousel-wrapper{
+    background-color: #027fb1;
+    /*    background-color: rgba(46, 49, 146, 1);*/
+    height: 150px;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+.quotes{
+    display: block;
+/*    font-family: "Consolas", "Verdana";*/
+    color:#fff;
+    font-size: 10pt;
+    font-weight: bold;
+}
+.quotes::before{
+    content: "\201C ";
+    /*    font-family: Georgia, serif;*/
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.quotes::after{
+    content: "";
+}
+
+.quoted-from::before{
+    content: "\2014";
+    /*    font-family: Georgia, serif;*/
+    font-size: 10px;
+    font-weight: bold;
+}
+.quoted-from::after{
+    content: "";
+}
+
+.quoted-from{
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    color:#fff;
+}
+
+.carousel-picture-slide{
+    width: 100%;
+}
+
+.subtitle{
+/*    font-family: "Baskerville Old Face", "Berlin Sans Fb", Arial;*/
+    font-size: 16pt;
+    font-variant-caps: small-caps;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: -2rem;
+}
+
+.event-berita{
+    margin-top: 1rem;
+}
+
+.berita-title{
+    font-size: 16pt;
+    font-variant-caps: small-caps;
+    color: rgba(46, 49, 146, 1);
+    font-weight: bold;
+    border-bottom-style: solid;
+    border-bottom-width: medium;
+    border-bottom-color: rgba(46, 49, 146, 1);
+    margin-bottom: 1rem;
+}
+
+.event-title{
+    font-size: 16pt;
+    font-variant-caps: small-caps;
+    color: rgba(46, 49, 146, 1);
+    font-weight: bold;
+    border-bottom-style: solid;
+    border-bottom-width: medium;
+    border-bottom-color: rgba(46, 49, 146, 1);
+    margin-bottom: 1rem;
+}
+
+.event-body{
+    padding-left: 0px;
+}
+
+.event-item{
+    /*    border-color: rgba(46, 49, 146, 1);
+        border-style: solid;
+        border-width: thin;*/
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    height: 80px;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.item-event-title{
+    font-size: 10pt;
+    font-weight: normal;
+    color:rgba(46, 49, 146, 1);
+    padding: 0 0.1rem;
+}
+
+.item-event-title:hover{
+    text-decoration: none;
+}
+
+.thumb-calendar-event{
+    height:80px;
+    width: 80px;
+    background-color: rgba(46, 49, 146, 0.85);
+    position:relative !important;
+    border: thin solid #fff;
+    line-height: normal;
+    overflow: hidden;
+}
+.thumb-calendar-event:last-child {
+    margin-bottom: 0;
+}
+.thumb-calendar-event:before, .thumb-calendar-event:after {
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 58px;
+    right: 0;
+    content: "";
+}
+.thumb-calendar-event:before {
+    border-top: solid 10px transparent;
+    border-right: solid 10px #fff;
+    border-left: solid 10px transparent;
+    border-bottom: solid 10px #fff;
+}
+.thumb-calendar-event:after {
+    border-bottom: solid 10px transparent;
+    border-left: solid 10px rgba(46, 49, 146, 1);
+    border-top-left-radius: 5px;
+    border-right: solid 10px transparent;
+    border-top: solid 10px rgba(46, 49, 146, 1);
+    box-shadow: -1px 1px 3px #212835;
+}
+
+.thumb-calendar-short-date{
+    height:0px;
+    width: 80px;
+    color: #fff;
+/*    font-family: Corbel, Consolas, Constantia;*/
+    font-size: 10pt;
+    font-variant: small-caps;
+    overflow: visible;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.thumb-calendar-short-date p{
+    margin:0;
+}
+
+.thumb-calendar-short-date .thumb-month{
+    font-weight: bold;
+    border-bottom: thin double #fff;
+}
+.thumb-calendar-short-date .thumb-date{
+    height:10px;
+/*    font-family: Cooper, "Cooper Std";*/
+    font-size: 30pt;
+}
+
+.event-end{
+    margin-bottom: 1rem;
+    float: right;
+}
+
+.berita-top{
+    margin-bottom: 1rem;
+}
+
+.berita-end{
+    margin-bottom: 1rem;
+    float: right;
+}
+
+.mymedia{
+    /*    border-color: rgba(46, 49, 146, 1);
+        border-style: solid;
+        border-width: thin;
+    height: 128px;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    overflow: hidden;*/
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding: 0 1rem;
+}
+
+
+/*Moved to responsive media breakpoint*/
+@media (min-width: 992px) {
+    .item-berita-title{
+        font-size: 11pt;
+        font-weight: bold;
+        color:rgba(46, 49, 146, 1);
+        padding-right: 0.3rem;
+        margin-bottom: 0;
+    }
+
+    .item-berita-title:hover{
+        text-decoration: none;
+    }
+
+    .item-berita-subtitle{
+        vertical-align: top;
+        margin-top: 0;
+        padding-top: -10px;
+        font-size: 8pt;
+        margin-bottom: 0.75rem;
+    }
+}
+
+@media (min-width: 320px) and (max-width:560px) {
+    .item-berita-title{
+        font-size: 9pt;
+        color:rgba(46, 49, 146, 1);
+        padding-right: 0.3rem;
+        margin-bottom: 0;
+    }
+    .item-berita-title:hover{
+        text-decoration: none;
+    }
+
+    .item-berita-subtitle{
+        vertical-align: top;
+        margin-top: 0;
+        padding-top: -10px;
+        font-size: 7pt;
+        margin-bottom: 0.75rem;
+    }
+    .card-text{
+        font-size: 7pt;
+    }
+}
+
+.link-next{
+    color:rgba(46, 49, 146, 1);
+    font-size: 10pt;
+    font-style: oblique;
+    padding: 0.25rem 0.5rem;
+}
+
+.link-next:hover{
+    background-color: rgba(46, 49, 146, 1);
+    color: rgba(254, 254, 254, 1);
+    font-size: 10pt;
+    font-style: oblique;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    text-decoration: none;
+}
+
+.sharp-card{
+    border-radius: 0;
+    margin-bottom: 0.5rem;
+}
+
+.subfooter{
+    border-radius: 0;
+}
+
+.sharp-card.card-img-top-sharp{
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.card-text{
+    font-size: 10pt;
+}
+
+.card-block-berita{
+    height: 8rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.footer{
+    height: 5rem;
+
+}
+
+.sublink-text-inverse{
+    color: #ffffff;
+    font-size: 10pt;
+}
+
+
+/*This is the beginning of single page styling*/
+.page-title{
+    font-size: 16pt;
+    font-weight: bolder;
+    font-variant: small-caps;
+    padding: 2rem 0;
+    color: rgba(46, 49, 146, 1);
+}
+
+.page-subtitle{
+    font-size: 13pt;
+    font-weight: bolder;
+    font-variant: small-caps;
+    padding:0;
+    color: rgba(46, 49, 146, 1);
+}
+
+.page-content{
+    font-size: 11pt;
+    line-height: 1.5rem;
+    color: #002020; 
+}
+
+.small-sections{
+    padding-top: 5.5rem;
 }
