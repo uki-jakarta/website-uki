@@ -15,8 +15,16 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
+        $carousel = $this->PE->get_element('MainCarousel');
+        $pengumuman = $this->PE->get_element('MainPengumuman');
+        $isiPengumuman = json_decode($pengumuman['sIsi']);
+        $data = array(
+            'carousel' => json_decode($carousel['sIsi']),
+            'pengumuman' => $isiPengumuman[0]
+        );
+
         $this->load->view('v_Start');
-        $this->load->view('v_Home');
+        $this->load->view('v_Home', $data);
         $this->load->view('v_End');
 	}
 }
