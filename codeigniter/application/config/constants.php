@@ -88,5 +88,4 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 
 //Custom Define Constants
 define ('WEBSITE_API_URL', "http://localhost/webapi/website.php/");
-define ('WEBSITE_BASE_URL', 'http://localhost/ukiweb2/');
-define ('WEBSITE_ADMIN_URL', "http://localhost/ukiweb2/admin/");
+define ('WEBSITE_BASE_URL', 'http://localhost/ukiwebfrontend/');
