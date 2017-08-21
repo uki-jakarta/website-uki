@@ -35,7 +35,7 @@ class m_PageElements extends CI_Model
 		return $menu;
 	}
 	
-	function update_menu($data) {
+/*	function update_menu($data) {
 		if (!isset($data['level'])) { return '0'; }
 		$currentMenu = $this->get_menu_tree();
 		if ($currentMenu == '') $currentMenu = array('menu1'=>array());
@@ -53,6 +53,7 @@ class m_PageElements extends CI_Model
 			case '4':
 		}
 	}
+	*/
 	 
 	 
 }

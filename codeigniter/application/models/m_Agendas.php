@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class m_agenda extends CI_Model
+class m_Agendas extends CI_Model
 {
 	 protected $table_name = 'Agenda';
      protected $pk ='Agenda_id';

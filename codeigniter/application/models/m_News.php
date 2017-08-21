@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class m_news extends CI_Model
+class m_News extends CI_Model
 {
 	 protected $table_name = 'Berita';
      protected $pk ='berita_id';
