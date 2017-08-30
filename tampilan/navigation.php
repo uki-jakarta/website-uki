@@ -162,14 +162,15 @@
                             </div>
                             <div class="col-lg-4 col-sm-12">
                                 <a class="dropdown-item item-head disabled" href="#">Column #3</a>
-                                <a class="dropdown-item item-head" href="news.php">Template Berita</a>
+                                <a class="dropdown-item item-head" href="newslists.php">Berita</a>
+                                <a class="dropdown-item item-child" href="news.php">Template Berita</a>
                                 <a class="dropdown-item item-head" href="event.php">Template Event</a>
                                 <a class="dropdown-item item-head" href="article.php">Template Artikel</a>
                                 <a class="dropdown-item item-head" href="OneBigPage.php">One Big Page</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item item-child" href="emptypage.php">Empty Page</a>
-                                <a class="dropdown-item item-child" href="#">Child 2</a>
-                                <a class="dropdown-item item-child" href="#">Child 3</a>
+                                <a class="dropdown-item item-child" href="twocolumns.php">Empty Page - Two Columns</a>
+                                <a class="dropdown-item item-child" href="event-list.php">Big Event</a>
                             </div>
                         </div>
                     </div>

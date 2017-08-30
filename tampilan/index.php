@@ -31,11 +31,28 @@
         <script src="assets/tether/js/tether.js"></script>
         <!-- Bootstrap -->
         <script src="assets/bootstrap/js/bootstrap.js"></script>
+        
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var hideTweetMedia = function () {
+                    $(".twitter").find(".twitter-timeline").contents().find(".timeline-Tweet-media").css("display", "none");
+                    $(".twitter").find(".twitter-timeline").contents().find(".timeline-Tweet-text .timeline-Tweet-author").css("font-family", "Roboto");
+                    $(".twitter").find(".twitter-timeline").contents().find(".timeline-Tweet-author").css("color", "rgba(46, 49, 146, 0.85)");
+                    $(".twitter").find(".twitter-timeline").contents().find(".timeline-Tweet-text").css("font-size", "10pt");
+                    $(".twitter").find(".twitter-timeline").contents().find(".timeline-Tweet-text").css("line-height", "1");
+                    //$("#twitter-widget-0").css("height", "100%");
+                    $(".twitter").find(".twitter-timeline").contents().find(".timeline-TweetList").bind("DOMSubtreeModifiedpropertychange", function () {
+                        hideTweetMedia(this);
+                    }
+                    );
+                };
+                $(".twitter").delegate("#twitter-widget-0", "DOMSubtreeModified propertychange", function () {
+                    hideTweetMedia();
+                });
+            });
+        </script>
         <!-- Custom Fonts -->
         <style>
-            @import url('https://fonts.googleapis.com/css?family=Oswald');
-            @import url('https://fonts.googleapis.com/css?family=Boogaloo');
-            @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
             @import url('https://fonts.googleapis.com/css?family=Roboto');
         </style>
     </head>
@@ -54,7 +71,7 @@
                 </ol>
                 <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active">
-                        <img class="img-fluid" src="http://placehold.it/1400x530" alt="First slide">
+                        <img class="img-fluid" src="assets/img/slide1.jpg" alt="First slide">
                     </div>
                     <div class="carousel-item">
                         <img class="img-fluid" src="http://placehold.it/1400x530" alt="Second slide">
@@ -90,7 +107,7 @@
                         <div class="berita-top col-lg-12 col-md-12">
                             <div class="card-group">
                                 <div class="card sharp-card">
-                                    <img class="card-img-top-sharp" src="http://placehold.it/200x150" alt="Card image cap">
+                                    <img class="img-fluid card-img-top-sharp" src="http://placehold.it/3000x500" alt="Card image cap">
                                     <div class="card-block card-block-berita">
                                         <h4 class="card-title item-berita-title">Website UKI yang Baru</h4>
                                         <div class="text-muted item-berita-subtitle">last updated 13 Juli 2017</div>
@@ -98,7 +115,7 @@
                                     </div>
                                 </div>
                                 <div class="card sharp-card">
-                                    <img class="card-img-top-sharp" src="http://placehold.it/200x150" alt="Card image cap">
+                                    <img class="img-fluid card-img-top-sharp" src="assets/img/maruarar.jpg" alt="Card image cap">
                                     <div class="card-block card-block-berita">
                                         <h4 class="card-title item-berita-title">Pengembangan Website Baru</h4>
                                         <div class="text-muted item-berita-subtitle">last updated 13 Juli 2017</div>
@@ -106,7 +123,7 @@
                                     </div>
                                 </div>
                                 <div class="card sharp-card">
-                                    <img class="card-img-top-sharp" src="http://placehold.it/200x150" alt="Card image cap">
+                                    <img class="img-fluid card-img-top-sharp" src="http://placehold.it/200x150" alt="Card image cap">
                                     <div class="card-block card-block-berita">
                                         <a href="#" class="card-title item-berita-title">PKM UKI 2017: Berjibaku di Malang Selatan </a>
                                         <div class="text-muted item-berita-subtitle">last updated 13 Juli 2017</div>
@@ -190,7 +207,7 @@
                 </div>
             </div>
             <div class="container-fluid belt-wrapper">
-                
+
                 <div class="text-center container">
                     <div class="mymedia">
                         <img class="img-thumbnail rektor-image" src="http://placehold.it/100x150" alt="Generic placeholder image">
@@ -208,7 +225,7 @@
                         <div class="article-title">Artikel</div>
                         <div class="card-group">
                             <div class="card sharp-card">
-                                <img class="card-img-top-sharp" src="http://placehold.it/200x150" alt="Card image cap">
+                                <img class="img-fluid card-img-top-sharp" src="assets/img/ft-web.jpg" alt="Card image cap">
                                 <div class="card-block card-block-berita">
                                     <h4 class="card-title item-berita-title">Website UKI yang Baru</h4>
                                     <div class="text-muted item-berita-subtitle">last updated 13 Juli 2017</div>
@@ -216,7 +233,7 @@
                                 </div>
                             </div>
                             <div class="card sharp-card">
-                                <img class="card-img-top-sharp" src="http://placehold.it/200x150" alt="Card image cap">
+                                <img class="img-fluid card-img-top-sharp" src="http://placehold.it/400x300" alt="Card image cap">
                                 <div class="card-block card-block-berita">
                                     <h4 class="card-title item-berita-title">Pengembangan Website Baru</h4>
                                     <div class="text-muted item-berita-subtitle">last updated 13 Juli 2017</div>
@@ -224,7 +241,7 @@
                                 </div>
                             </div>
                             <div class="card sharp-card">
-                                <img class="card-img-top-sharp" src="http://placehold.it/200x150" alt="Card image cap">
+                                <img class="img-fluid card-img-top-sharp" src="http://placehold.it/200x150" alt="Card image cap">
                                 <div class="card-block card-block-berita">
                                     <a href="#" class="card-title item-berita-title">PKM UKI 2017: Berjibaku di Malang Selatan </a>
                                     <div class="text-muted item-berita-subtitle">last updated 13 Juli 2017</div>
@@ -235,8 +252,11 @@
                         <div class="article-end"><a href="#" class="link-next">Artikel lainnya &egs;</a></div>
                     </div>
                     <div class="col-lg-4 col-md-12">
-                        <div class="custom-title">Didukung Oleh</div>
-                        Lorem ipsum dolor sit amet
+                        <div class="custom-title">Tweets</div>
+                        <div class="twitter">
+                            <a class="twitter-timeline" data-cards="hidden" data-theme="light" data-tweet-limit="3" data-chrome="noheader nofooter noborders noscrollbar transparent" href="https://twitter.com/Kampus_UKI">Tweets by Kampus_UKI</a>
+                            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        </div>
                     </div>
                 </div>
             </div>

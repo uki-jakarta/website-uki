@@ -1,3 +1,59 @@
+<?php $myarr = "[
+                        {
+                            title: 'All Day Event',
+                            start: '2017-08-01'
+                        },
+                        {
+                            title: 'Long Event',
+                            start: '2017-05-07',
+                            end: '2017-08-10'
+                        },
+                        {
+                            id: 999,
+                            title: 'Repeating Event',
+                            start: '2017-08-09T16:00:00'
+                        },
+                        {
+                            id: 999,
+                            title: 'Repeating Event',
+                            start: '2017-08-16T16:00:00'
+                        },
+                        {
+                            title: 'Conference',
+                            start: '2017-08-11',
+                            end: '2017-08-13'
+                        },
+                        {
+                            title: 'Meeting',
+                            start: '2017-08-12T10:30:00',
+                            end: '2017-08-12T12:30:00'
+                        },
+                        {
+                            title: 'Lunch',
+                            start: '2017-08-12T12:00:00'
+                        },
+                        {
+                            title: 'Meeting',
+                            start: '2017-08-12T14:30:00'
+                        },
+                        {
+                            title: 'Happy Hour',
+                            start: '2017-08-12T17:30:00'
+                        },
+                        {
+                            title: 'Dinner',
+                            start: '2017-08-12T20:00:00'
+                        },
+                        {
+                            title: 'Birthday Party',
+                            start: '2017-08-13T07:00:00'
+                        },
+                        {
+                            title: 'Click for Google',
+                            url: 'http://google.com/',
+                            start: '2017-08-28'
+                        }
+                    ]";?>
 <!DOCTYPE html>
 <!--
     This is a template
@@ -11,7 +67,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>My Website Template - One Big Page</title>
+        <title>My Website Template - Big Events</title>
 
         <link rel="icon" href="assets/img/logo.png">
         <!-- CSS -->
@@ -21,16 +77,46 @@
         <link href="assets/fontawesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
         <!-- Dan's Animate -->
         <link href="assets/css/animate.css" rel="stylesheet" type="text/css"/>
+        <!-- Full Calendar -->
+        <link href="fullcalendar/fullcalendar.css" rel="stylesheet"/>
+        <link href="fullcalendar/fullcalendar.print.css" rel="stylesheet" media="print"/>
         <!-- Custom -->
         <link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
 
         <!-- JS -->
         <!-- JQuery -->
+        <script src="fullcalendar/lib/moment.min.js"></script>
         <script src="assets/jquery/jquery.js"></script>
         <!-- Tether -->
         <script src="assets/tether/js/tether.js"></script>
         <!-- Bootstrap -->
         <script src="assets/bootstrap/js/bootstrap.js"></script>
+        <!-- Full Calendar -->
+        <script src="fullcalendar/fullcalendar.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#calendar').fullCalendar({
+                    header: {
+                        left: '',
+                        center: 'title',
+                        right: 'prev, next today'
+                    },
+                    defaultDate: '2017-08-24',
+                    editable: false,
+                    navLinks: false, // can click day/week names to navigate views
+                    eventLimit: true, // allow "more" link when too many events
+                    businessHours: {
+                        // days of week. an array of zero-based day of week integers (0=Sunday)
+                        dow: [1, 2, 3, 4, 5, 6], // Monday - Thursday
+
+                        start: '10:00', // a start time (10am in this example)
+                        end: '18:00', // an end time (6pm in this example)
+                    },
+                    events: <?php echo $myarr; ?>
+                });
+            });
+           
+        </script>
         <!-- Custom Fonts -->
         <style>
             @import url('https://fonts.googleapis.com/css?family=Roboto');
@@ -42,92 +128,10 @@
             <?php include "navigation.php"; ?>
         </header>
         <div class="container wrapper">
-            <div class="row">
-                <!--Breadcrumbs-->
-                <nav class="breadcrumb col-lg-12 col-md-12">
-                    <a class="breadcrumb-item" href="#">Home</a>
-                    <a class="breadcrumb-item" href="#">Events</a>
-                    <a class="breadcrumb-item active" href="#">Satu Event</a>
-                </nav>
-                <!--End of Breadcrumbs-->
-                <div class="col-lg-8 col-md-12">
-                    <div class="page-title">Satu Event</div>
-                    <div class="text-muted berita-last-update">last updated 13 Juli 2017</div>
-                    <div class="page-content">
-                        <!--Featured Image-->
-                        <div class="page-image">
-                            <img class="img-thumbnail mx-auto d-block" src="http://placehold.it/1280x440" alt="Page Image">
-                        </div>
-                        <!--End of Featured Image-->
-                        <div class="event-held">
-                            <ul class="list-unstyled">
-                                <li><i class="fa fa-clock-o" aria-hidden="true"></i> 08:00 &mdash; 10:00 </li>
-                                <li><i class="fa fa-calendar" aria-hidden="true"></i> 15 Ags 2017 &mdash; 15 Ags 2017 </li>
-                                <li><i class="fa fa-map-marker" aria-hidden="true"></i> Aula FK UKI</li>
-                                <li><i class="fa fa-id-badge" aria-hidden="true"></i> PMB UKI</li>
-                                <li><i class="fa fa-pencil-square" aria-hidden="true"> Seminar</i></li>
-                            </ul>
-                        </div>
-                        <div class="page-subtitle">Deskripsi</div>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    </div>
-                    <div class="social-media-sharing">
-                        <div class="sub-u">Share via</div>
-                        <ul class="list-unstyled list-inline">
-                            <li class="list-inline-item"><a href="http://www.facebook.com/sharer.php?u=[EncodedURL]" target="_blank" rel="nofollow"><i class="fa fa-facebook-official fa-2x mod-facebook" aria-hidden="true"></i></a></li>
-                            <li class="list-inline-item"><a href="http://twitter.com/share?text=[TITLE]&url=[URL]" target="_blank" rel="nofollow"><i class="fa fa-twitter fa-2x mod-twitter" aria-hidden="true"></i></a></li>
-                            <li class="list-inline-item"><a href="mailto:?subject=[SUBJECT]&body=Check out this site [URL]" target="_blank" rel="nofollow"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="small-sections col-lg-4 col-md-12">
-                    <ul class="list-unstyled">
-                        <li class="mymedia">
-                            <div class="media-body align-self-center">
-                                <a href="#" class="item-event-title">Judul Event yang Akan Datang #1</a>
-                                <div class="text-muted item-berita-subtitle">last updated 13 Juli 2017</div>
-                            </div>
-                            <div class="thumb-calendar-event-o">
-                                <div class="thumb-calendar-short-date-o"><p class="thumb-date">24</p><p class="thumb-month">Ags</p></div>
-                            </div>
-                        </li>
-                        <li class="mymedia">
-                            <div class="media-body align-self-center">
-                                <a href="#" class="item-event-title">Judul Event yang Akan Datang #2</a>
-                                <div class="text-muted item-berita-subtitle">last updated 13 Juli 2017</div>
-                            </div>
-                            <div class="thumb-calendar-event-o">
-                                <div class="thumb-calendar-short-date-o"><p class="thumb-date">6</p><p class="thumb-month">Sep</p></div>
-                            </div>
-                        </li>
-                        <li class="mymedia">
-                            <div class="media-body align-self-center">
-                                <a href="#" class="item-event-title">Judul Event yang Akan Datang #3</a>
-                                <div class="text-muted item-berita-subtitle">last updated 13 Juli 2017</div>
-                            </div>
-                            <div class="thumb-calendar-event-o">
-                                <div class="thumb-calendar-short-date-o"><p class="thumb-date">20</p><p class="thumb-month">Sep</p></div>
-                            </div>
-                        </li>
-                        <li class="mymedia">
-                            <div class="media-body align-self-center">
-                                <a href="#" class="item-event-title">Judul Event yang Akan Datang #4</a>
-                                <div class="text-muted item-berita-subtitle">last updated 13 Juli 2017</div>
-                            </div>
-                            <div class="thumb-calendar-event-o">
-                                <div class="thumb-calendar-short-date-o"><p class="thumb-date">22</p><p class="thumb-month">Sep</p></div>
-                            </div>
-                        </li>
-                        <li class="mymedia">
-                            <div class="media-body align-self-center">
-                                <a href="#" class="item-event-title">Judul Event yang Akan Datang #5</a>
-                                <div class="text-muted item-berita-subtitle">last updated 13 Juli 2017</div>
-                            </div>
-                            <div class="thumb-calendar-event-o">
-                                <div class="thumb-calendar-short-date-o"><p class="thumb-date">22</p><p class="thumb-month">Sep</p></div>
-                            </div>
-                        </li>
-                    </ul>
+            <div class="col-lg-12 col-md-12">
+                <div class="page-title calendar-title">Agenda Universitas Kristen Indonesia</div>
+                <div class="page-content">
+                    <div id="calendar"></div>
                 </div>
             </div>
         </div>
