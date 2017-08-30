@@ -11,7 +11,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>My Website Template - One Big Page</title>
+        <title>My Website Template - Empty Page</title>
 
         <link rel="icon" href="assets/img/logo.png">
         <!-- CSS -->
@@ -21,16 +21,22 @@
         <link href="assets/fontawesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
         <!-- Dan's Animate -->
         <link href="assets/css/animate.css" rel="stylesheet" type="text/css"/>
+        <!-- Full Calendar -->
+        <link href="fullcalendar/fullcalendar.css" rel="stylesheet"/>
+        <link href="fullcalendar/fullcalendar.print.css" rel="stylesheet" media="print"/>
         <!-- Custom -->
         <link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
 
         <!-- JS -->
         <!-- JQuery -->
+        <script src="fullcalendar/lib/moment.min.js"></script>
         <script src="assets/jquery/jquery.js"></script>
         <!-- Tether -->
         <script src="assets/tether/js/tether.js"></script>
         <!-- Bootstrap -->
         <script src="assets/bootstrap/js/bootstrap.js"></script>
+        <!-- Full Calendar -->
+        <script src="fullcalendar/fullcalendar.js"></script>
         <!-- Custom Fonts -->
         <style>
             @import url('https://fonts.googleapis.com/css?family=Roboto');

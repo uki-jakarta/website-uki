@@ -24,7 +24,15 @@
             </div>
             <div class="card subfooter accent-color">
                 <div class="card-block">
-                    <p class="card-text">This is a tweet's feed.</p>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="sublink-text-inverse">Biro/Unit #1</a></li>
+                        <li><a href="#" class="sublink-text-inverse">Biro/Unit #2</a></li>
+                        <li><a href="#" class="sublink-text-inverse">Biro/Unit #3</a></li>
+                        <li><a href="#" class="sublink-text-inverse">Biro/Unit #4</a></li>
+                        <li><a href="#" class="sublink-text-inverse">Biro/Unit #5</a></li>
+                        <li><a href="#" class="sublink-text-inverse">Biro/Unit #6</a></li>
+                        <li><a href="#" class="sublink-text-inverse">Biro/Unit #7</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="card subfooter accent-color">

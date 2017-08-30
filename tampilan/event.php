@@ -11,7 +11,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>My Website Template - One Big Page</title>
+        <title>My Website Template - Event</title>
 
         <link rel="icon" href="assets/img/logo.png">
         <!-- CSS -->
@@ -21,16 +21,22 @@
         <link href="assets/fontawesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
         <!-- Dan's Animate -->
         <link href="assets/css/animate.css" rel="stylesheet" type="text/css"/>
+        <!-- Full Calendar -->
+        <link href="fullcalendar/fullcalendar.css" rel="stylesheet"/>
+        <link href="fullcalendar/fullcalendar.print.css" rel="stylesheet" media="print"/>
         <!-- Custom -->
         <link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
 
         <!-- JS -->
         <!-- JQuery -->
+        <script src="fullcalendar/lib/moment.min.js"></script>
         <script src="assets/jquery/jquery.js"></script>
         <!-- Tether -->
         <script src="assets/tether/js/tether.js"></script>
         <!-- Bootstrap -->
         <script src="assets/bootstrap/js/bootstrap.js"></script>
+        <!-- Full Calendar -->
+        <script src="fullcalendar/fullcalendar.js"></script>
         <!-- Custom Fonts -->
         <style>
             @import url('https://fonts.googleapis.com/css?family=Roboto');
@@ -56,7 +62,7 @@
                     <div class="page-content">
                         <!--Featured Image-->
                         <div class="page-image">
-                            <img class="img-thumbnail mx-auto d-block" src="http://placehold.it/1280x440" alt="Page Image">
+                            <img class="img-thumbnail mx-auto d-block" src="assets/img/ft-web.jpg" alt="Page Image">
                         </div>
                         <!--End of Featured Image-->
                         <div class="event-held">
