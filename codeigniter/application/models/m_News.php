@@ -2,9 +2,6 @@
 
 class m_News extends CI_Model
 {
-	 protected $table_name = 'Berita';
-     protected $pk ='berita_id';
-	
      function __construct()
      {
           // Call the Model constructor
@@ -15,16 +12,23 @@ class m_News extends CI_Model
      }
 
 	 function get_all_news() {
-		$url = WEBSITE_API_URL.'news/';
-		return get_JSON_data($url);
+		$url = WEBSITE_API_URL.'berita';
+		$dataBerita = get_JSON_data($url);
+		return $dataBerita['berita'];
 	 }
 	 
 	 function get_news($nId) {
-		$url = WEBSITE_API_URL.'news/'.$nId;
+		$url = WEBSITE_API_URL.'berita/'.$nId;
 		return get_JSON_data($url);
 	 }
-	 
-	 function count_news() {
 
+	 function get_recent_news($total) {
+		 $url = WEBSITE_API_URL.'berita?page=1,'.$total;
+		 $dataBerita = get_JSON_data($url);
+		 return $dataBerita['berita'];
+	 }
+
+	 function get_news_details($slugtitle, $date) {
+		return 1;
 	 }
 }?>
