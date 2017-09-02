@@ -3,7 +3,7 @@
                 <!--Breadcrumbs-->
                 <nav class="breadcrumb col-lg-12 col-md-12">
                     <a class="breadcrumb-item" href="<?php echo base_url(); ?>">Home</a>
-                    <a class="breadcrumb-item" href="<?php echo base_url('event/event_list'); ?>">Events</a>
+                    <a class="breadcrumb-item" href="<?php echo base_url('event/list_event'); ?>">Events</a>
                     <a class="breadcrumb-item active" href="<?php echo base_url('event/event_list').$dataEvent['slug']; ?>"><?php echo $dataEvent['judul']; ?></a>
                 </nav>
                 <!--End of Breadcrumbs-->
@@ -20,9 +20,9 @@
                             <ul class="list-unstyled">
                                 <li><i class="fa fa-clock-o" aria-hidden="true"></i> 08:00 &mdash; 10:00 </li>
                                 <li><i class="fa fa-calendar" aria-hidden="true"></i> 15 Ags 2017 &mdash; 15 Ags 2017 </li>
-                                <li><i class="fa fa-map-marker" aria-hidden="true"></i><?php echo $dataEvent['place']; ?></li>
-                                <li><i class="fa fa-id-badge" aria-hidden="true"></i><?php echo $dataEvent['organizer']; ?></li>
-                                <li><i class="fa fa-pencil-square" aria-hidden="true"><?php echo $dataEvent['event_type']; ?></i></li>
+                                <li><i class="fa fa-map-marker" aria-hidden="true"></i> <?php echo $dataEvent['place']; ?></li>
+                                <li><i class="fa fa-id-badge" aria-hidden="true"></i> <?php echo $dataEvent['organizer']; ?></li>
+                                <li><i class="fa fa-pencil-square" aria-hidden="true"> <?php echo $dataEvent['event_type']; ?></i></li>
                             </ul>
                         </div>
                         <div class="page-subtitle">Deskripsi</div>
