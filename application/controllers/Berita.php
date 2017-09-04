@@ -54,24 +54,25 @@ class Berita extends CI_Controller {
              $config["num_links"] = 5;
      
              //config for bootstrap pagination class integration
-             $config['full_tag_open'] = '<ul style="text-align:center" class="pagination">';
+             $config['full_tag_open'] = '<ul class="pagination justify-content-center">';
              $config['full_tag_close'] = '</ul>';
              $config['first_link'] = false;
              $config['last_link'] = false;
-             $config['first_tag_open'] = '<li>';
+             $config['first_tag_open'] = '<li class="page-item">';
              $config['first_tag_close'] = '</li>';
              $config['prev_link'] = '&laquo';
              $config['prev_tag_open'] = '<li class="prev">';
              $config['prev_tag_close'] = '</li>';
-             $config['next_link'] = '&raquo';
-             $config['next_tag_open'] = '<li>';
+             $config['next_link'] = '&raquo;';
+             $config['next_tag_open'] = '<li class="page-item">';
              $config['next_tag_close'] = '</li>';
-             $config['last_tag_open'] = '<li>';
+             $config['last_tag_open'] = '<li class="page-item">';
              $config['last_tag_close'] = '</li>';
-             $config['cur_tag_open'] = '<li class="active"><a href="#">';
+             $config['cur_tag_open'] = '<li class="page-item active"><a class="page-link" href="#">';
              $config['cur_tag_close'] = '</a></li>';
-             $config['num_tag_open'] = '<li>';
-             $config['num_tag_close'] = '</li>';            
+             $config['num_tag_open'] = '<li class="page-item">';
+             $config['num_tag_close'] = '</li>';
+             $config['attributes'] = array('class' => 'page-link');            
             
              $data['news']= ($this->uri->segment(3)) ? $this->uri->segment(3) : 1; 
              $newslist = $this->NEWS->news_list(($data['news']/$config["per_page"]), $config["per_page"]);
