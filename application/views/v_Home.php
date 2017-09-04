@@ -42,50 +42,50 @@
                 <div class="row">
                     <div class="col-lg-8 col-md-12">
                         <div class="berita-title">Berita Terkini</div>
-                    <?php 
-                        $listBerita ='';
-                        $cardBerita ='';
-                        if (count($berita) > 3) { 
-                            echo '<div class="berita-top col-lg-12 col-md-12"><div class="card-group">';
-                            for ($i=0; $i<3 ; $i++) {
-                                $cardBerita .= '<div class="card sharp-card">';
-                                $cardBerita .= '<img class="card-img-top-sharp" src="'.$berita[$i]['image'].'" alt="">';
-                                $cardBerita .= '<div class="card-block card-block-berita">';
-                                $cardBerita .= '<h4 class="card-title item-berita-title">'.$berita[$i]['judul'].'</h4>';
-                                $cardBerita .= '<div class="text-muted item-berita-subtitle">last updated '.$berita[$i]['tanggal_edit'].'</div>';
-                                $cardBerita .= '<p class="card-text">'.substr($berita[$i]['isi'], 0, 150).'</p>';
-                                $cardBerita .= '</div></div>';
-                            }
-                            echo $cardBerita;
-                            echo '</div></div>';
-                            echo '<ul class="list-unstyled">';
-                            for ($i=3; $i<count($berita); $i++) {
-                                $listBerita .= '<li class="mymedia"><div class="media-body align-self-center">';
-                                $listBerita .= '<a href="'.base_url('/berita/'.$berita[$i]['slug']).'" class="item-berita-title">'.$berita[$i]['judul'].'</a>';
-                                $listBerita .= '<div class="text-muted item-berita-subtitle">last updated '.$berita[$i]['tanggal_edit'].'</div>';
-                                $listBerita .= '</div></li>';
-                            }
-                            echo $listBerita;
-                            echo '</ul><div class="berita-end"><a href="'.base_url('/berita/list_berita').'" class="link-next">Berita lainnya &egs;</a></div></div>';
-                        } else {
-                            echo '<div class="berita-top col-lg-12 col-md-12"><div class="card-group">';
-                            for ($i=0; $i<count($berita) ; $i++) {
-                                $cardBerita .= '<div class="card sharp-card">';
-                                $cardBerita .= '<img class="card-img-top-sharp" src="'.$berita[$i]['image'].'" alt="">';
-                                $cardBerita .= '<div class="card-block card-block-berita">';
-                                $cardBerita .= '<h4 class="card-title item-berita-title">'.$berita[$i]['judul'].'</h4>';
-                                $cardBerita .= '<div class="text-muted item-berita-subtitle">last updated '.$berita[$i]['tanggal_edit'].'</div>';
-                                $cardBerita .= '<p class="card-text">'.substr($berita[$i]['isi'], 0, 150).'</p>';
-                                $cardBerita .= '</div></div>';
-                            }
-                            for ($i= count($berita); $i<3; $i++) {
-                                $cardBerita .= '<div class="card sharp-card"></div>';
-                            }
-                            echo $cardBerita;
-                            echo '</div></div>';
-                            echo '<div class="berita-end"><a href="'.base_url('/berita/list_berita').'" class="link-next">Berita lainnya &egs;</a></div>';
-                        }?>
-                    </div>
+                                <?php 
+                                    $listBerita ='';
+                                    $cardBerita ='';
+                                    if (count($berita) > 3) { 
+                                        echo '<div class="berita-top col-lg-12 col-md-12"><div class="card-group">';
+                                        for ($i=0; $i<3 ; $i++) {
+                                            $cardBerita .= '<div class="card sharp-card">';
+                                            $cardBerita .= '<img class="img-fluid card-img-top-sharp" src="'.$berita[$i]['image'].'" alt="">';
+                                            $cardBerita .= '<div class="card-block card-block-berita">';
+                                            $cardBerita .= '<h4 class="card-title item-berita-title"><a href="'.base_url('/berita/list_berita/'.$berita[$i]['slug']).'">'.$berita[$i]['judul'].'</a></h4>';
+                                            $cardBerita .= '<div class="text-muted item-berita-subtitle">last updated '.$berita[$i]['tanggal_edit'].'</div>';
+                                            $cardBerita .= '<p class="card-text">'.substr($berita[$i]['isi'], 0, 150).'</p>';
+                                            $cardBerita .= '</div></div>';
+                                        }
+                                        echo $cardBerita;
+                                        echo '</div></div>';
+                                        echo '<ul class="list-unstyled">';
+                                        for ($i=3; $i<count($berita); $i++) {
+                                            $listBerita .= '<li class="mymedia"><div class="media-body align-self-center">';
+                                            $listBerita .= '<a href="'.base_url('/berita/list_berita/'.$berita[$i]['slug']).'" class="item-berita-title">'.$berita[$i]['judul'].'</a>';
+                                            $listBerita .= '<div class="text-muted item-berita-subtitle">last updated '.$berita[$i]['tanggal_edit'].'</div>';
+                                            $listBerita .= '</div></li>';
+                                        }
+                                        echo $listBerita;
+                                        echo '</ul><div class="berita-end"><a href="'.base_url('/berita/list_berita').'" class="link-next">Berita lainnya &egs;</a></div></div>';
+                                    } else {
+                                        echo '<div class="berita-top col-lg-12 col-md-12"><div class="card-group">';
+                                        for ($i=0; $i<count($berita) ; $i++) {
+                                            $cardBerita .= '<div class="card sharp-card">';
+                                            $cardBerita .= '<img class="img-fluid card-img-top-sharp" src="'.$berita[$i]['image'].'" alt="">';
+                                            $cardBerita .= '<div class="card-block card-block-berita">';
+                                            $cardBerita .= '<h4 class="card-title item-berita-title">'.$berita[$i]['judul'].'</h4>';
+                                            $cardBerita .= '<div class="text-muted item-berita-subtitle">last updated '.$berita[$i]['tanggal_edit'].'</div>';
+                                            $cardBerita .= '<p class="card-text">'.substr($berita[$i]['isi'], 0, 150).'</p>';
+                                            $cardBerita .= '</div></div>';
+                                        }
+                                        for ($i= count($berita); $i<3; $i++) {
+                                            $cardBerita .= '<div class="card sharp-card"></div>';
+                                        }
+                                        echo $cardBerita;
+                                        echo '</div></div>';
+                                        echo '<div class="berita-end"><a href="'.base_url('/berita/list_berita').'" class="link-next">Berita lainnya &egs;</a></div>';
+                                    }?>
+                    
                     <div class="col-lg-4 col-md-12 ">
                         <div class="event-title">Events</div>
                         <?php 
@@ -94,7 +94,7 @@
                                 $listEvent .= '<li class="event-item"><div class="d-flex mr-3"><div class="thumb-calendar-event">';
                                 $listEvent .= '<div class="thumb-calendar-short-date"><p class="thumb-month">'.date('M \'y',strtotime($event[$i]['tanggal_mulai'])).'</p><p class="thumb-date">'.date('d',strtotime($event[$i]['tanggal_mulai'])).'</p></div>';
                                 $listEvent .= '</div></div><div class="event-body align-self-center">';
-                                $listEvent .= '<a href="'.base_url('/event/'.$event[$i]['slug']).'" class="item-event-title">"'.$event[$i]['judul'].'"</a>';
+                                $listEvent .= '<a href="'.base_url('/event/list_event/'.$event[$i]['slug']).'" class="item-event-title">"'.$event[$i]['judul'].'"</a>';
                                 $listEvent .= '</div></li>';
                             }
                             $listEvent .=  '</ul><div class="event-end"><a href="'.base_url('/event/list_event').'" class="link-next">Peristiwa lainnya &egs;</a></div>';
@@ -107,7 +107,7 @@
                 
                 <div class="text-center container">
                     <div class="mymedia">
-                        <img class="img-thumbnail rektor-image" src="<?php echo $pojokrektor->image; ?>" alt="Generic placeholder image">
+                        <img class="img-thumbnail rektor-image" src="<?php echo $pojokrektor->image; ?>" alt="IMAGE">
                         <div class="media-body">
                             <div class="subtitle">Pojok Rektor</div>
                             <div class="col-md-12 quotes text-left"><?php echo $pojokrektor->content; ?></div>
@@ -122,7 +122,7 @@
                         <div class="article-title">Artikel</div>
                         <div class="card-group">
                             <div class="card sharp-card">
-                                <img class="card-img-top-sharp" src="http://placehold.it/200x150" alt="Card image cap">
+                                <img class="img-fluid card-img-top-sharp" src="http://192.168.10.186:9999/assets/img/article/artikel-01.jpg" alt="Card image cap">
                                 <div class="card-block card-block-berita">
                                     <h4 class="card-title item-berita-title">Website UKI yang Baru</h4>
                                     <div class="text-muted item-berita-subtitle">last updated 13 Juli 2017</div>
@@ -130,7 +130,7 @@
                                 </div>
                             </div>
                             <div class="card sharp-card">
-                                <img class="card-img-top-sharp" src="http://placehold.it/200x150" alt="Card image cap">
+                                <img class="img-fluid card-img-top-sharp" src="http://192.168.10.186:9999/assets/img/article/artikel-02.jpg" alt="Card image cap">
                                 <div class="card-block card-block-berita">
                                     <h4 class="card-title item-berita-title">Pengembangan Website Baru</h4>
                                     <div class="text-muted item-berita-subtitle">last updated 13 Juli 2017</div>
@@ -138,7 +138,7 @@
                                 </div>
                             </div>
                             <div class="card sharp-card">
-                                <img class="card-img-top-sharp" src="http://placehold.it/200x150" alt="Card image cap">
+                                <img class="img-fluid card-img-top-sharp" src="http://192.168.10.186:9999/assets/img/article/artikel-03.jpg" alt="Card image cap">
                                 <div class="card-block card-block-berita">
                                     <a href="#" class="card-title item-berita-title">PKM UKI 2017: Berjibaku di Malang Selatan </a>
                                     <div class="text-muted item-berita-subtitle">last updated 13 Juli 2017</div>
@@ -149,9 +149,12 @@
                         <div class="article-end"><a href="#" class="link-next">Artikel lainnya &egs;</a></div>
                     </div>
                     <div class="col-lg-4 col-md-12">
-                        <div class="custom-title">Didukung Oleh</div>
-                        Lorem ipsum dolor sit amet
+                    <div class="custom-title">Tweets</div>
+                    <div class="twitter">
+                        <a class="twitter-timeline" data-cards="hidden" data-theme="light" data-tweet-limit="3" data-chrome="noheader nofooter noborders noscrollbar transparent" href="https://twitter.com/Kampus_UKI">Tweets by Kampus_UKI</a>
+                        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
+                </div>
                 </div>
             </div>
         </div>

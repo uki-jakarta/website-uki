@@ -44,10 +44,10 @@
                         <?php 
                             for($i=0; $i<count($recentnews); $i++) {
                                 echo '<li class="mymedia"><div class="media-body align-self-center">';
-                                echo '<a href="#" class="item-berita-title">'.$recentnews[$i]['judul'].'</a>';
+                                echo '<a href="'.base_url('berita/list_berita/').$recentnews[$i]['slug'].'" class="item-berita-title">'.$recentnews[$i]['judul'].'</a>';
                                 echo '<div class="text-muted item-berita-subtitle">last updated '.$recentnews[$i]['tanggal_edit'].'</div>';
                                 echo '</div>';
-                                echo '<img class="card-img img-thumbnail" src="'.$recentnews[$i]['image'].'" alt="IMAGE">';
+                                echo '<img class="my-img-thumbnail card-img img-thumbnail" src="'.$recentnews[$i]['image'].'" alt="IMAGE">';
                                 echo '</li>';
                             }
                             ?>

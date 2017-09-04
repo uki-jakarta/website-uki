@@ -51,6 +51,27 @@ class Home extends CI_Controller {
 //            unset($dataArtikel[$k]['article_var']);
 //        }
 
+
+        $additionalJS = '<script type="text/javascript">
+                            $(document).ready(function () {
+                                var hideTweetMedia = function () {
+                                    $(".twitter").find(".twitter-timeline").contents().find(".timeline-Tweet-media").css("display", "none");
+                                    $(".twitter").find(".twitter-timeline").contents().find(".timeline-Tweet-text .timeline-Tweet-author").css("font-family", "Roboto");
+                                    $(".twitter").find(".twitter-timeline").contents().find(".timeline-Tweet-author").css("color", "rgba(46, 49, 146, 0.85)");
+                                    $(".twitter").find(".twitter-timeline").contents().find(".timeline-Tweet-text").css("font-size", "10pt");
+                                    $(".twitter").find(".twitter-timeline").contents().find(".timeline-Tweet-text").css("line-height", "1");
+                                    //$("#twitter-widget-0").css("height", "100%");
+                                    $(".twitter").find(".twitter-timeline").contents().find(".timeline-TweetList").bind("DOMSubtreeModifiedpropertychange", function () {
+                                        hideTweetMedia(this);
+                                    }
+                                    );
+                                };
+                                $(".twitter").delegate("#twitter-widget-0", "DOMSubtreeModified propertychange", function () {
+                                    hideTweetMedia();
+                                });
+                            });
+                        </script>';
+
         $data = array(
             'carousel' => json_decode($carousel['isi']),
             'pengumuman' => $isiPengumuman[0],
@@ -59,8 +80,11 @@ class Home extends CI_Controller {
 //            'artikel' => $dataArtikel,
             'event' => $dataEvent
         );
+        $add = array (
+            'additionalJS' => $additionalJS
+        );
 
-        $this->load->view('v_Start');
+        $this->load->view('v_Start', $add);
         $this->load->view('v_Home', $data);
         $this->load->view('v_End');
 	}

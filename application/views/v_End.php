@@ -4,10 +4,12 @@
                 <div class="card-group w-100">
                     <div class="card subfooter accent-color">
                         <div class="card-block">
-                            <p class="text-center">
-                                <img class="img-thumbnail" src="assets/img/logo.png" width="80" alt="UKI"/>
+                            <p class="card-text text-center"><br><br><strong>Universitas Kristen Indonesia</strong><br><br />
+                            <strong>Kampus Cawang</strong><br />Jl.Mayjen Sutoyo No 2. Jakarta<br>13630 - Indonesia<br />
+                            021-8092425<br /><br />
+                            <strong>Kampus Diponegoro</strong><br />Jl.Diponegoro No. 84-86, Jakarta Pusat<br>10430 - Indonesia
+                            021-3920174
                             </p>
-                            <p class="card-text text-center"><br><br><strong>Universitas Kristen Indonesia</strong><br>Jl.Mayjen Sutoyo No 2. Jakarta<br>13630 - Indonesia</p>
                         </div>
                     </div>
                     <div class="card subfooter accent-color">
@@ -25,7 +27,13 @@
                     </div>
                     <div class="card subfooter accent-color">
                         <div class="card-block">
-                            <p class="card-text">This is a tweet's feed.</p>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="sublink-text-inverse">Unit Pengembangan Sistem Informasi</a></li>
+                                <li><a href="#" class="sublink-text-inverse">Biro Humas dan Pemasaran</a></li>
+                                <li><a href="#" class="sublink-text-inverse">Biro Keuangan dan Akuntansi</a></li>
+                                <li><a href="#" class="sublink-text-inverse">Biro Administrasi Akademik</a></li>
+                                <li><a href="#" class="sublink-text-inverse">Biro Kemahasiswaan dan Alumni</a></li>
+                                <li><a href="#" class="sublink-text-inverse">Unit Pelayanan Kerohanian dan Konseling </a></li>                            </ul>
                         </div>
                     </div>
                     <div class="card subfooter accent-color">

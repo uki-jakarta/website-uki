@@ -45,7 +45,7 @@
                         <?php
                             foreach ($upcomingEvent as $k => $v) {
                                 echo '<li class="mymedia"><div class="media-body align-self-center">';
-                                echo '<a href="'.base_url().$v["slug"].'" class="item-event-title">'.$v["slug"].'</a>';
+                                echo '<a href="'.base_url('event/list_event/').$v["slug"].'" class="item-event-title">'.$v["slug"].'</a>';
                                 echo '<div class="text-muted item-berita-subtitle">last updated '.$v["tanggal_edit"].'</div>';
                                 echo '</div><div class="thumb-calendar-event-o">';
                                 echo '<div class="thumb-calendar-short-date-o"><p class="thumb-date">'.date('d',strtotime($v['tanggal_mulai'])).'</p><p class="thumb-month">'.date('M',strtotime($v['tanggal_mulai'])).'</p></div>';
