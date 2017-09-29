@@ -69,7 +69,7 @@
                 </button>
                 <a class="navbar-brand" href="<?php echo base_url();?>"><img src="<?php echo base_url(); ?>assets/img/logo-utama.png" width="250" alt="Logo UKI"></a>
 
-                <div class="collapse navbar-collapse offset-0 offset-md-0 offset-lg-1" id="miniUKI">
+                <div class="collapse navbar-collapse offset-0 offset-md-0 offset-lg-2" id="miniUKI">
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
                             <a class="nav-link menulink dropdown-toggle" href="#" id="dd-tentangUKI" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
