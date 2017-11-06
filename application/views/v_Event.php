@@ -13,13 +13,13 @@
                     <div class="page-content">
                         <!--Featured Image-->
                         <div class="page-image">
-                            <img class="img-thumbnail mx-auto d-block" src="<?php echo $dataEvent['image']; ?>" alt="Event Image">
+                            <img class="img-thumbnail mx-auto d-block" src="<?php $image = json_decode($dataEvent['image']); if (isset($image->url)) echo $image->url ?>" alt="">
                         </div>
                         <!--End of Featured Image-->
                         <div class="event-held">
                             <ul class="list-unstyled">
-                                <li><i class="fa fa-clock-o" aria-hidden="true"></i> 08:00 &mdash; 10:00 </li>
-                                <li><i class="fa fa-calendar" aria-hidden="true"></i> 15 Ags 2017 &mdash; 15 Ags 2017 </li>
+                                <li><i class="fa fa-clock-o" aria-hidden="true"></i> <?php echo $dataEvent['time']; ?></li>
+                                <li><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo $dataEvent['date']; ?> </li>
                                 <li><i class="fa fa-map-marker" aria-hidden="true"></i> <?php echo $dataEvent['place']; ?></li>
                                 <li><i class="fa fa-id-badge" aria-hidden="true"></i> <?php echo $dataEvent['organizer']; ?></li>
                                 <li><i class="fa fa-pencil-square" aria-hidden="true"> <?php echo $dataEvent['event_type']; ?></i></li>
@@ -45,7 +45,7 @@
                         <?php
                             foreach ($upcomingEvent as $k => $v) {
                                 echo '<li class="mymedia"><div class="media-body align-self-center">';
-                                echo '<a href="'.base_url('event/list_event/').$v["slug"].'" class="item-event-title">'.$v["slug"].'</a>';
+                                echo '<a href="'.base_url('event/list_event/').$v["slug"].'" class="item-event-title">'.$v["judul"].'</a>';
                                 echo '<div class="text-muted item-berita-subtitle">last updated '.$v["tanggal_edit"].'</div>';
                                 echo '</div><div class="thumb-calendar-event-o">';
                                 echo '<div class="thumb-calendar-short-date-o"><p class="thumb-date">'.date('d',strtotime($v['tanggal_mulai'])).'</p><p class="thumb-month">'.date('M',strtotime($v['tanggal_mulai'])).'</p></div>';

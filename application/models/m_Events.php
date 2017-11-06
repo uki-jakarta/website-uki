@@ -22,8 +22,8 @@ class m_Events extends CI_Model
 	}
 
 	function get_event_details($slugtitle, $date) {
-        $url = WEBSITE_API_URL . 'event?filter[]=dTglPembuatan,ge,'. $date .'%2000:00:00&filter[]=dTglPembuatan,le,' . $date . '%2023:59:59&satisfy=all';
-        $allevent = get_JSON_data($url);
+        $url = WEBSITE_API_URL . 'event?filter[]=tanggal_pembuatan,ge,'. $date .'%2000:00:00&filter[]=tanggal_pembuatan,le,' . $date . '%2023:59:59&satisfy=all';
+		$allevent = get_JSON_data($url);
         $event = $allevent['event'];
         foreach ($event as $k =>$v) {
             if (url_title(strtolower($v['judul'])) == $slugtitle) {
@@ -33,9 +33,9 @@ class m_Events extends CI_Model
         return null;
     }
 
-	function get_upcoming_events($total = 0){
-		if ($total==0) { $url = WEBSITE_API_URL.'event?filter=dTglAwal,ge,'.date("Y-m-d%20H:i:s"); }
-		else { $url = WEBSITE_API_URL.'event?filter=dTglAwal,ge,'.date("Y-m-d%20H:i:s").'&page=1,'.$total; }
+	function get_upcoming_events($total = 0) {
+		if ($total==0) { $time = strtotime("-2 year", time()); $url = WEBSITE_API_URL.'event?filter=dTglAwal,ge,'.date("Y-m-d%20H:i:s", $time); }
+		else { $url = WEBSITE_API_URL.'event?filter=dTglAwal,ge,'.date("Y-m-d%20H:i:s").'&order[]=dTglAwal,asc&page=1,'.$total;}
 		$dataEvent = get_JSON_data($url);
 		return $dataEvent['event'];
 	}

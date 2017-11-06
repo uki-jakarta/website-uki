@@ -24,11 +24,24 @@ class Event extends CI_Controller {
             $slugtitle = substr($slug, 9);
             //event detail
             $eventdetail = $this->EVENT->get_event_details($slugtitle, date('Y-m-d', $date));
+            
             foreach ($eventdetail['event_var'] as $k => $v) {
                 $eventdetail[$v['var_nama']] = $v['var_value'];
             }
             unset($eventdetail['event_var']);
-            
+
+            //fetch start time, end time, start date and end date
+            $start_time = date("H:i",strtotime($eventdetail['tanggal_mulai']));
+            $end_time = date("H:i",strtotime($eventdetail['tanggal_akhir']));
+            $start_date = date("d M Y",strtotime($eventdetail['tanggal_mulai']));
+            $end_date = date("d M Y",strtotime($eventdetail['tanggal_akhir']));
+
+            //berikan nilai dari variabel date dan time
+            //berikan mdash kalau start dan end nya tidak sama
+            if ($start_time != $end_time) $eventdetail['time'] = $start_time.' &mdash; '.$end_time; else $eventdetail['time'] = $start_time;
+            if ($start_date != $end_date) $eventdetail['date'] = $start_date.' &mdash; '.$end_date; else $eventdetail['date'] = $start_date;
+           
+
 
             $upcomingEvent = $this->EVENT->get_upcoming_events(5);   
             foreach ($upcomingEvent as $k => $v) {
@@ -50,13 +63,21 @@ class Event extends CI_Controller {
 
         } else {
             $upEvent = $this->EVENT->get_upcoming_events();
+            foreach ($upEvent as $k => $v) {
+                foreach ($v['event_var'] as $vk => $vv) {
+                    $upEvent[$k][$vv['var_nama']] = $vv['var_value'];
+                    $upEvent[$k][$vv['var_nama'].'_id'] = $vv['var_id'];
+                }
+                unset($upEvent[$k]['event_var']);
+            }
             if ($upEvent != '') {
                 $dataEvent = '[';
                 foreach ($upEvent as $k => $v) {
                     $dataEvent .= '{';
                     $dataEvent .= "id:'".$v['id_event']."',";
                     $dataEvent .= "title:'".$v['judul']."',";
-                    $dataEvent .= "start:'".substr($v['tanggal_mulai'],0,10)."'";
+                    $dataEvent .= "start:'".substr($v['tanggal_mulai'],0,10)."',";
+                    $dataEvent .= "url:'list_event/".$v['slug']."'";
                     $dataEvent .= '},';
                 }
                 $dataEvent = trim($dataEvent, ',');
@@ -72,7 +93,7 @@ class Event extends CI_Controller {
                                          center: 'title',
                                          right: 'prev, next today'
                                      },
-                                     defaultDate: '2017-08-24',
+                                     defaultDate: '".date('Y-m-d')."',
                                      editable: false,
                                      navLinks: false, 
                                      eventLimit: true, 
@@ -80,6 +101,7 @@ class Event extends CI_Controller {
                                          dow: [1, 2, 3, 4, 5, 6], 
                                          start: '10:00', 
                                          end: '18:00',
+                                         
                                      },
                                      events: $dataEvent
                                  });

@@ -12,8 +12,9 @@
                         <ul class="list-unstyled">
                         <?php  
                         foreach ($articleslist as $k => $v) { 
+                            $image = json_decode($v['image']);
                             echo '<li class="mymedia">';
-                            echo '<img class="my-img-thumbnail d-flex mr-3" src="'.$v['image'].'" alt="IMAGE">';
+                            echo '<img class="my-img-thumbnail d-flex mr-3" src="'.$image->url.'" alt="IMAGE">';
                             echo '<div class="media-body">';
                             echo '<a href="'.base_url('artikel/list_artikel/').$v['slug'].'" class="item-artikel-title">'.$v['judul'].'</a>';
                             echo '<div class="text-muted item-artikel-subtitle">last updated '.$v['tanggal_edit'].'</div>';

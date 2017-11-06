@@ -2,8 +2,8 @@
             <div class="row">
                 <!--Breadcrumbs-->
                 <nav class="breadcrumb col-lg-12 col-md-12">
-                    <a class="breadcrumb-item" href="#">Home</a>
-                    <a class="breadcrumb-item" href="#">Berita</a>
+                    <a class="breadcrumb-item" href="<?php echo site_url(); ?>">Home</a>
+                    <a class="breadcrumb-item" href="<?php echo site_url('news'); ?>">Berita</a>
                     <a class="breadcrumb-item active" href="#"><?php echo $newsdetail['judul']; ?></a>
                 </nav>
                 <!--End of Breadcrumbs-->
@@ -13,11 +13,12 @@
                     <div class="page-content">
                         <!--Featured Image-->
                         <div class="page-image">
-                            <img class="img-thumbnail mx-auto d-block" src="<?php echo $newsdetail['image']; ?>" alt="<?php echo $newsdetail['judul']; ?>">
+                            <img class="img-thumbnail mx-auto d-block" src="<?php $image = json_decode($newsdetail['image']); echo $image->url; ?>" alt="<?php echo $newsdetail['judul']; ?>">
                         </div>
                         <!--End of Featured Image-->
-                        <strong><?php echo $newsdetail['location']; ?>, <?php echo $newsdetail['reporter']; ?> &mdash; </strong><?php echo $newsdetail['isi']; ?>
-<!--                        <div class="row berita-thumb-images">
+                        <strong><?php echo $newsdetail['location']; ?>, <?php echo $newsdetail['reporter']; ?> </strong><?php echo $newsdetail['isi']; ?><strong>(<?php echo $newsdetail['penulis']; ?>)</strong>
+<!--                        
+                        <div class="row berita-thumb-images">
                             <img class="card-img img-thumbnail" src="http://placehold.it/128x128" alt="Card image">
                             <img class="card-img img-thumbnail" src="http://placehold.it/128x128" alt="Card image">
                             <img class="card-img img-thumbnail" src="http://placehold.it/128x128" alt="Card image">
@@ -43,11 +44,12 @@
                     <ul class="list-unstyled">
                         <?php 
                             for($i=0; $i<count($recentnews); $i++) {
+                                $image = json_decode($recentnews[$i]['image']);
                                 echo '<li class="mymedia"><div class="media-body align-self-center">';
                                 echo '<a href="'.base_url('berita/list_berita/').$recentnews[$i]['slug'].'" class="item-berita-title">'.$recentnews[$i]['judul'].'</a>';
                                 echo '<div class="text-muted item-berita-subtitle">last updated '.$recentnews[$i]['tanggal_edit'].'</div>';
                                 echo '</div>';
-                                echo '<img class="my-img-thumbnail card-img img-thumbnail" src="'.$recentnews[$i]['image'].'" alt="IMAGE">';
+                                echo '<img class="my-img-thumbnail card-img img-thumbnail" src="'.$image->url.'" alt="IMAGE">';
                                 echo '</li>';
                             }
                             ?>

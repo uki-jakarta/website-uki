@@ -87,5 +87,5 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 
 
 //Custom Define Constants
-define ('WEBSITE_API_URL', "http://192.168.10.184/website.php/");
-define ('WEBSITE_BASE_URL', 'http://192.168.10.186:9999/website/');
+define ('WEBSITE_API_URL', "http://192.168.10.184/website-test.php/");
+define ('WEBSITE_BASE_URL', 'http://192.168.10.186:9999/');
