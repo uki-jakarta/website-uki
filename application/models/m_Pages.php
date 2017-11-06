@@ -22,10 +22,18 @@ class m_Pages extends CI_Model
          return $result;
      }
 
-     function get_page($page_id) {
-        $url = WEBSITE_API_URL.'halaman/'.$page_id;
+     function get_page($pagename) {
+        $urlvar = WEBSITE_API_URL.'halaman_var?filter[]=var_value,eq,'.$pagename;
+        $var = get_JSON_data($urlvar);
+        $url = WEBSITE_API_URL.'halaman?filter[]=id_halaman,eq,'.$var['halaman_var'][0]['id_halaman'];
         $result = get_JSON_data($url);
 		return $result['halaman'];
+     }
+
+     function get_page_link($page_id) {
+        $url = $urlvar = WEBSITE_API_URL.'halaman_var?filter[]=id_halaman,eq,'.$page_id.'&filter[]=var_nama,eq,slug';;
+        $result = get_JSON_data($url);
+        return site_url('halaman/index/'.$result['halaman_var'][0]['var_value']);
      }
 
      function insert_page($data) {

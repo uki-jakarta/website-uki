@@ -13,10 +13,10 @@
                     <div class="page-content">
                         <!--Featured Image-->
                         <div class="page-image">
-                            <img class="img-thumbnail mx-auto d-block" src="<?php echo $articledetail['image']; ?>" alt="<?php echo $articledetail['judul']; ?>">
+                            <img class="img-thumbnail mx-auto d-block" src="<?php $image = json_decode($articledetail['image']); echo $image->url;  ?>" alt="<?php echo $articledetail['judul']; ?>">
                         </div>
                         <!--End of Featured Image-->
-                        <strong><?php echo $articledetail['location']; ?>, <?php echo $articledetail['reporter']; ?> &mdash; </strong><?php echo $articledetail['isi']; ?>
+                        <strong><?php echo $articledetail['reporter']; ?> &mdash; </strong><?php echo $articledetail['isi']; ?>
 <!--                        <div class="row berita-thumb-images">
                             <img class="card-img img-thumbnail" src="http://placehold.it/128x128" alt="Card image">
                             <img class="card-img img-thumbnail" src="http://placehold.it/128x128" alt="Card image">
@@ -42,12 +42,13 @@
                 <div class="small-sections col-lg-4 col-md-12">
                     <ul class="list-unstyled">
                         <?php 
-                            for($i=0; $i<count($recentarticle); $i++) {
+                            for($i=0; $i<count($recentarticles); $i++) {
+                                $image = json_decode($recentarticles[$i]['image']);
                                 echo '<li class="mymedia"><div class="media-body align-self-center">';
-                                echo '<a href="'.base_url('artikel/list_artikel/').$recentarticle[$i]['slug'].'" class="item-berita-title">'.$recentarticle[$i]['judul'].'</a>';
-                                echo '<div class="text-muted item-berita-subtitle">last updated '.$recentarticle[$i]['tanggal_edit'].'</div>';
+                                echo '<a href="'.base_url('artikel/list_artikel/').$recentarticles[$i]['slug'].'" class="item-berita-title">'.$recentarticles[$i]['judul'].'</a>';
+                                echo '<div class="text-muted item-berita-subtitle">last updated '.$recentarticles[$i]['tanggal_edit'].'</div>';
                                 echo '</div>';
-                                echo '<img class="my-img-thumbnail card-img img-thumbnail" src="'.$recentarticle[$i]['image'].'" alt="IMAGE">';
+                                echo '<img class="my-img-thumbnail card-img img-thumbnail" src="'.$image->url.'" alt="IMAGE">';
                                 echo '</li>';
                             }
                             ?>

@@ -11,6 +11,7 @@ class Home extends CI_Controller {
          $this->load->model('m_Events','EVENT');
          $this->load->model('m_News','NEWS');
          $this->load->model('m_Articles', 'ARTICLE');
+         $this->load->model('m_Informations', 'INFORMATION');
 		 
      }
 
@@ -19,8 +20,10 @@ class Home extends CI_Controller {
         $carousel = $this->PE->get_element('carousel');
         $pengumuman = $this->PE->get_element('pengumuman');
         $pojokrektor = $this->PE->get_element('pojok_rektor');
+        $testimoni = $this->PE->get_element('testimoni');
         $isiPengumuman = json_decode($pengumuman['isi']);
         $isiPojokRektor = json_decode($pojokrektor['isi']);
+        $isiTestimoni = json_decode($testimoni['isi']);
 
         //news
         $dataBerita = $this->NEWS->get_recent_news(5);   
@@ -42,22 +45,31 @@ class Home extends CI_Controller {
             unset($dataEvent[$k]['event_var']);
         }
 
-//        $dataArtikel = $this->EVENT->get_recent_articles(3);   
-//        foreach ($dataArtikel as $k => $v) {
-//            foreach ($v['article_var'] as $vk => $vv) {
-//				$dataArtikel[$k][$vv['var_nama']] = $vv['var_value'];
-//				$dataArtikel[$k][$vv['var_nama'].'_id'] = $vv['var_id'];
-//            }
-//            unset($dataArtikel[$k]['article_var']);
-//        }
+        //Artikel
+        $dataArtikel = $this->ARTICLE->get_recent_articles(5);   
+        foreach ($dataArtikel as $k => $v) {
+            foreach ($v['artikel_var'] as $vk => $vv) {
+				$dataArtikel[$k][$vv['var_nama']] = $vv['var_value'];
+				$dataArtikel[$k][$vv['var_nama'].'_id'] = $vv['var_id'];
+            }
+            unset($dataArtikel[$k]['artikel_var']);
+        }
 
+        $dataInformasi = $this->INFORMATION->get_recent_informations(10);
+        foreach ($dataInformasi as $k => $v) {
+            foreach ($v['informasi_var'] as $vk => $vv) {
+				$dataInformasi[$k][$vv['var_nama']] = $vv['var_value'];
+				$dataInformasi[$k][$vv['var_nama'].'_id'] = $vv['var_id'];
+            }
+            unset($dataInformasi[$k]['informasi_var']);
+        }
 
         $additionalJS = '<script type="text/javascript">
                             $(document).ready(function () {
                                 var hideTweetMedia = function () {
                                     $(".twitter").find(".twitter-timeline").contents().find(".timeline-Tweet-media").css("display", "none");
                                     $(".twitter").find(".twitter-timeline").contents().find(".timeline-Tweet-text .timeline-Tweet-author").css("font-family", "Roboto");
-                                    $(".twitter").find(".twitter-timeline").contents().find(".timeline-Tweet-author").css("color", "rgba(46, 49, 146, 0.85)");
+                                    $(".twitter").find(".twitter-timeline").contents().find(".timeline-Tweet-author").css("color", "rgba(0, 0, 102, 1)");
                                     $(".twitter").find(".twitter-timeline").contents().find(".timeline-Tweet-text").css("font-size", "10pt");
                                     $(".twitter").find(".twitter-timeline").contents().find(".timeline-Tweet-text").css("line-height", "1");
                                     //$("#twitter-widget-0").css("height", "100%");
@@ -74,10 +86,12 @@ class Home extends CI_Controller {
 
         $data = array(
             'carousel' => json_decode($carousel['isi']),
-            'pengumuman' => $isiPengumuman[0],
-            'pojokrektor' => $isiPojokRektor[0],
+            'pengumuman' => $isiPengumuman,
+            'pojokrektor' => $isiPojokRektor,
+            'testimoni' => $isiTestimoni,
             'berita' => $dataBerita,
-//            'artikel' => $dataArtikel,
+            'artikel' => $dataArtikel,
+            'informasi' => $dataInformasi,
             'event' => $dataEvent
         );
         $add = array (
