@@ -28,13 +28,13 @@ class Halaman extends CI_Controller {
                 unset($pagedata[$k]['halaman_var']);
             }
 
-            
             $sidebar = $this->PE->get_element('sidebar');
-            $sidebar = json_decode($sidebar['isi']);
+            $sidebar = (array) json_decode($sidebar['isi']);
+        
 
-            if (isset($sidebar->$pagedata[0]['sidebar'])) {
+            if (isset($sidebar[$pagedata[0]['sidebar']])) {
                 $sidebarlist = array ();
-                foreach ($sidebar->$pagedata[0]['sidebar'] as $k => $v) {
+                foreach ($sidebar[$pagedata[0]['sidebar']] as $k => $v) {
                     $sidebarlist[$k]['label'] = $v->label;
                     if ($v->page_id == '') $sidebarlist[$k]['url'] = $v->url;
                     else $sidebarlist[$k]['url'] = $this->PAGES->get_page_link($v->page_id); 
