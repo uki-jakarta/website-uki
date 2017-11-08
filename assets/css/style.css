@@ -235,13 +235,6 @@ header{
     width: 100%;
 }
 
-.text-quotes-wrapper{
-    background-color: #027fb1;
-    min-height: 150px;
-    overflow: hidden;
-    margin: 1rem 0;
-    box-shadow: 0 4px 2px -2px gray;
-}
 .quotes{
     display: block;
     color:#fff;
@@ -389,7 +382,7 @@ header{
     border: thin solid #fff;
     line-height: normal;
     overflow: hidden;
-    
+
 }
 .thumb-calendar-event:last-child {
     margin-bottom: 0;
@@ -601,6 +594,22 @@ header{
     .small-container-wrapper{
         min-height: 80vh;
     }
+
+    .text-quotes-wrapper{
+        background-color: #027fb1;
+        min-height: 150px;
+        overflow: hidden;
+        margin: 3.5rem 0 3.5rem;
+        box-shadow: 0 4px 2px -2px gray;
+    }
+    .belt-wrapper{
+        background-color: #027fb1;
+        min-height: 150px;
+        overflow: hidden;
+        margin: 3.5rem 0 3.5rem;
+        padding-bottom: 1rem;
+        box-shadow: 0 4px 2px -2px gray;
+    }
 }
 
 @media (min-width: 280px) and (max-width:990px) {
@@ -712,6 +721,21 @@ header{
         width: 180px;
         border-radius: 5px;
     }
+    .text-quotes-wrapper{
+        background-color: #027fb1;
+        min-height: 150px;
+        overflow: hidden;
+        margin: 1rem 0;
+        box-shadow: 0 4px 2px -2px gray;
+    }
+    .belt-wrapper{
+        background-color: #027fb1;
+        min-height: 150px;
+        overflow: hidden;
+        margin: 1rem 0;
+        padding-bottom: 1rem;
+        box-shadow: 0 4px 2px -2px gray;
+    }
 }
 
 .link-next{
@@ -805,15 +829,6 @@ header{
     background-color: #fff;
     border-bottom-right-radius: 25px;
     border-top-right-radius: 25px;
-}
-
-.belt-wrapper{
-    background-color: #027fb1;
-    min-height: 150px;
-    overflow: hidden;
-    margin: 1rem 0;
-    padding-bottom: 1rem;
-    box-shadow: 0 4px 2px -2px gray;
 }
 
 .big-link{
