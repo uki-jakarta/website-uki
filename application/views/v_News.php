@@ -3,13 +3,13 @@
                 <!--Breadcrumbs-->
                 <nav class="breadcrumb col-lg-12 col-md-12">
                     <a class="breadcrumb-item" href="<?php echo site_url(); ?>">Home</a>
-                    <a class="breadcrumb-item" href="<?php echo site_url('berita'); ?>">Berita</a>
+                    <a class="breadcrumb-item" href="<?php echo site_url('news'); ?>">Berita</a>
                     <a class="breadcrumb-item active" href="#"><?php echo $newsdetail['judul']; ?></a>
                 </nav>
                 <!--End of Breadcrumbs-->
                 <div class="col-lg-8 col-md-12">
                     <div class="page-title"><?php echo $newsdetail['judul']; ?></div>
-                    <div class="text-muted berita-last-update">last updated <?php echo $newsdetail['tanggal_edit']; ?></div>
+                    <div class="text-muted berita-last-update">last updated <?php echo date('d-m-Y', strtotime($newsdetail['tanggal_edit'])); ?></div>
                     <div class="page-content">
                         <!--Featured Image-->
                         <div class="page-image">
@@ -47,7 +47,7 @@
                                 $image = json_decode($recentnews[$i]['image']);
                                 echo '<li class="mymedia"><div class="media-body align-self-center">';
                                 echo '<a href="'.base_url('berita/list_berita/').$recentnews[$i]['slug'].'" class="item-berita-title">'.$recentnews[$i]['judul'].'</a>';
-                                echo '<div class="text-muted item-berita-subtitle">last updated '.$recentnews[$i]['tanggal_edit'].'</div>';
+                                echo '<div class="text-muted item-berita-subtitle">last updated '. date('d-m-Y', strtotime($recentnews[$i]['tanggal_edit'])).'</div>';
                                 echo '</div>';
                                 echo '<img class="my-img-thumbnail card-img img-thumbnail" src="'.$image->url.'" alt="IMAGE">';
                                 echo '</li>';

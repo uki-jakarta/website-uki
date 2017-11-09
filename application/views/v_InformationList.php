@@ -15,7 +15,7 @@
                             echo '<li class="mymedia">';
                             echo '<div class="media-body">';
                             echo '<a href="'.base_url('informasi/list_informasi/').$v['slug'].'" class="item-informasi-title">'.$v['judul'].'</a>';
-                            echo '<div class="text-muted item-informasi-subtitle">last updated '.$v['tanggal_edit'].'</div>';
+                            echo '<div class="text-muted item-informasi-subtitle">last updated '.date('d-m-Y', strtotime($v['tanggal_edit'])).'</div>';
                             echo '<div></li>';                            
                         }
                         ?>

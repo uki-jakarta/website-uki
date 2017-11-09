@@ -17,7 +17,7 @@
                 echo '<img class="my-img-thumbnail d-flex mr-3" src="'.$image->url.'" alt="IMAGE">';
                 echo '<div class="media-body">';
                 echo '<a href="'.base_url('berita/list_berita/').$v['slug'].'" class="item-berita-title">'.$v['judul'].'</a>';
-                echo '<div class="text-muted item-berita-subtitle">last updated '.$v['tanggal_edit'].'</div>';
+                echo '<div class="text-muted item-berita-subtitle">last updated '.date('d-m-Y', strtotime($v['tanggal_edit'])).'</div>';
                 echo '<div></li>';                            
             }
             ?>

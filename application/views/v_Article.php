@@ -9,7 +9,7 @@
                 <!--End of Breadcrumbs-->
                 <div class="col-lg-8 col-md-12">
                     <div class="page-title"><?php echo $articledetail['judul']; ?></div>
-                    <div class="text-muted berita-last-update">last updated <?php echo $articledetail['tanggal_edit']; ?></div>
+                    <div class="text-muted berita-last-update">last updated <?php echo date('d-m-Y', strtotime($articledetail['tanggal_edit'])); ?></div>
                     <div class="page-content">
                         <!--Featured Image-->
                         <div class="page-image">
