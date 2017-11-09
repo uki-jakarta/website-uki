@@ -339,10 +339,6 @@ header{
     margin-bottom: 1rem;
 }
 
-.belt-wrapper-testimoni{
-    background-image: url("../img/uki-grey.png");
-}
-
 .event-body{
     padding-left: 0px;
     padding-right:5px;
@@ -594,7 +590,7 @@ header{
     .small-container-wrapper{
         min-height: 80vh;
     }
-
+    
     .text-quotes-wrapper{
         background-color: #027fb1;
         min-height: 150px;
@@ -609,6 +605,12 @@ header{
         margin: 3.5rem 0 3.5rem;
         padding-bottom: 1rem;
         box-shadow: 0 4px 2px -2px gray;
+    }
+    
+    .belt-wrapper-testimoni{
+        background-image: url("../img/kolase-fix.png");
+        background-color: rgba(80, 100, 232, 1);
+        margin-bottom: 3rem;
     }
 }
 
@@ -735,6 +737,11 @@ header{
         margin: 1rem 0;
         padding-bottom: 1rem;
         box-shadow: 0 4px 2px -2px gray;
+    }
+    
+    .belt-wrapper-testimoni{
+        background-image: url("../img/kolase-fix.png");
+        background-color: rgba(80, 100, 232, 1);
     }
 }
 

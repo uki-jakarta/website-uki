@@ -201,7 +201,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid belt-wrapper belt-wrapper-testimoni" data-aos="fade-in-up" data-aos-once="true">
+    <div class="container-fluid belt-wrapper-testimoni" data-aos="fade-in-up" data-aos-once="true">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12">
