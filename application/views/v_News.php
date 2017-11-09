@@ -3,7 +3,7 @@
                 <!--Breadcrumbs-->
                 <nav class="breadcrumb col-lg-12 col-md-12">
                     <a class="breadcrumb-item" href="<?php echo site_url(); ?>">Home</a>
-                    <a class="breadcrumb-item" href="<?php echo site_url('news'); ?>">Berita</a>
+                    <a class="breadcrumb-item" href="<?php echo site_url('berita'); ?>">Berita</a>
                     <a class="breadcrumb-item active" href="#"><?php echo $newsdetail['judul']; ?></a>
                 </nav>
                 <!--End of Breadcrumbs-->
