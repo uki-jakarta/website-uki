@@ -9,7 +9,7 @@
                 <!--End of Breadcrumbs-->
                 <div class="col-lg-8 col-md-12">
                     <div class="page-title"><?php echo $informationdetail['judul']; ?></div>
-                    <div class="text-muted berita-last-update">last updated <?php echo $informationdetail['tanggal_edit']; ?></div>
+                    <div class="text-muted berita-last-update">last updated <?php echo date('d-m-Y', strtotime($informationdetail['tanggal_edit'])); ?></div>
                     <div class="page-content">
                         <!--Featured Image-->
                         <div class="page-image">
@@ -53,7 +53,7 @@
                                 $image = json_decode($recentinformations[$i]['image']);
                                 echo '<li class="mymedia"><div class="media-body align-self-center">';
                                 echo '<a href="'.base_url('informasi/list_informasi/').$recentinformations[$i]['slug'].'" class="item-berita-title">'.$recentinformations[$i]['judul'].'</a>';
-                                echo '<div class="text-muted item-berita-subtitle">last updated '.$recentinformations[$i]['tanggal_edit'].'</div>';
+                                echo '<div class="text-muted item-berita-subtitle">last updated '. date('d-m-Y', strtotime($recentinformations[$i]['tanggal_edit'])) .'</div>';
                                 echo '</div>';
                                 echo '</li>';
                             }

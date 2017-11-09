@@ -53,7 +53,7 @@
                         $cardBerita .= '<img class="img-fluid card-img-top-sharp" src="' . $image->url . '" alt="">';
                         $cardBerita .= '<div class="card-block card-block-berita">';
                         $cardBerita .= '<a class="item-berita-title" href="' . base_url('/berita/list_berita/' . $berita[$i]['slug']) . '">' . $berita[$i]['judul'] . '</a>';
-                        $cardBerita .= '<div class="text-muted item-berita-subtitle">last updated ' . $berita[$i]['tanggal_edit'] . '</div>';
+                        $cardBerita .= '<div class="text-muted item-berita-subtitle">last updated ' . date('d-m-Y', strtotime($berita[$i]['tanggal_edit'])) . '</div>';
                         $cardBerita .= '<div class="card-text">' . str_replace($replace, '', substr($berita[$i]['isi'], 0, 150)) . '</div>';
                         $cardBerita .= '</div></div>';
                     }
@@ -63,7 +63,7 @@
                     for ($i = 3; $i < count($berita); $i++) {
                         $listBerita .= '<li class="mymedia" data-aos="fade-in-up" data-aos-duration="600" data-aos-delay="'.($i*100).'" data-aos-once="true"><div class="media-body align-self-center">';
                         $listBerita .= '<a href="' . base_url('/berita/list_berita/' . $berita[$i]['slug']) . '" class="item-berita-title">' . $berita[$i]['judul'] . '</a>';
-                        $listBerita .= '<div class="text-muted item-berita-subtitle">last updated ' . $berita[$i]['tanggal_edit'] . '</div>';
+                        $listBerita .= '<div class="text-muted item-berita-subtitle">last updated ' . date('d-m-Y', strtotime($berita[$i]['tanggal_edit'])) . '</div>';
                         $listBerita .= '</div></li>';
                     }
                     echo $listBerita;
@@ -76,7 +76,7 @@
                         $cardBerita .= '<img class="img-fluid card-img-top-sharp" src="' . $image->url . '" alt="">';
                         $cardBerita .= '<div class="card-block card-block-berita">';
                         $cardBerita .= '<a class="item-berita-title" href="' . base_url('/berita/list_berita/' . $berita[$i]['slug']) . '">' . $berita[$i]['judul'] . '</a>';
-                        $cardBerita .= '<div class="text-muted item-berita-subtitle">last updated ' . $berita[$i]['tanggal_edit'] . '</div>';
+                        $cardBerita .= '<div class="text-muted item-berita-subtitle">last updated ' . date('d-m-Y', strtotime($berita[$i]['tanggal_edit'])) . '</div>';
                         $cardBerita .= '<div class="card-text">' . str_replace($replace, '', substr($berita[$i]['isi'], 0, 150)) . '</div>';
                         $cardBerita .= '</div></div>';
                     }
@@ -156,7 +156,7 @@
                         $cardArtikel .= '<img class="img-fluid card-img-top-sharp" src="' . base_url(str_replace('./', '', $image->url)) . '" alt="">';
                         $cardArtikel .= '<div class="card-block card-block-berita">';
                         $cardArtikel .= '<a class="item-berita-title" href="' . base_url('/artikel/list_artikel/' . $artikel[$i]['slug']) . '">' . $artikel[$i]['judul'] . '</a>';
-                        $cardArtikel .= '<div class="text-muted item-berita-subtitle">last updated ' . $artikel[$i]['tanggal_edit'] . '</div>';
+                        $cardArtikel .= '<div class="text-muted item-berita-subtitle">last updated ' . date('d-m-Y', strtotime($artikel[$i]['tanggal_edit'])) . '</div>';
                         $cardArtikel .= '<div class="card-text">' . str_replace($replace, '', substr($artikel[$i]['isi'], 0, 150)) . '</div>';
                         $cardArtikel .= '</div></div>';
                     }
@@ -166,7 +166,7 @@
                     for ($i = 3; $i < count($artikel); $i++) {
                         $listArtikel .= '<li class="mymedia" data-aos="fade-in-up" data-aos-duration="600" data-aos-delay="'.($i*100).'" data-aos-once="true"><div class="media-body align-self-center">';
                         $listArtikel .= '<a href="' . base_url('/artikel/list_artikel/' . $artikel[$i]['slug']) . '" class="item-berita-title">' . $artikel[$i]['judul'] . '</a>';
-                        $listArtikel .= '<div class="text-muted item-berita-subtitle">last updated ' . $artikel[$i]['tanggal_edit'] . '</div>';
+                        $listArtikel .= '<div class="text-muted item-berita-subtitle">last updated ' . date('d-m-Y', strtotime($artikel[$i]['tanggal_edit'])) . '</div>';
                         $listArtikel .= '</div></li>';
                     }
                     echo $listArtikel;
@@ -179,7 +179,7 @@
                         $cardArtikel .= '<img class="img-fluid card-img-top-sharp" src="' . $image->url . '" alt="">';
                         $cardArtikel .= '<div class="card-block card-block-berita">';
                         $cardArtikel .= '<a class="item-berita-title" href="' . base_url('/artikel/list_artikel/' . $artikel[$i]['slug']) . '">' . $artikel[$i]['judul'] . '</a>';
-                        $cardArtikel .= '<div class="text-muted item-berita-subtitle">last updated ' . $artikel[$i]['tanggal_edit'] . '</div>';
+                        $cardArtikel .= '<div class="text-muted item-berita-subtitle">last updated ' . date('d-m-Y', strtotime($artikel[$i]['tanggal_edit'])) . '</div>';
                         $cardArtikel .= '<div class="card-text">' . str_replace($replace, '', substr($artikel[$i]['isi'], 0, 150)) . '</div>';
                         $cardArtikel .= '</div></div>';
                     }
