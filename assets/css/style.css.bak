@@ -235,13 +235,6 @@ header{
     width: 100%;
 }
 
-.text-quotes-wrapper{
-    background-color: #027fb1;
-    min-height: 150px;
-    overflow: hidden;
-    margin: 1rem 0;
-    box-shadow: 0 4px 2px -2px gray;
-}
 .quotes{
     display: block;
     color:#fff;
@@ -348,6 +341,7 @@ header{
 
 .event-body{
     padding-left: 0px;
+    padding-right:5px;
 }
 
 .event-item{
@@ -362,6 +356,7 @@ header{
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
+    background-color: #fff;
 }
 
 .item-event-title{
@@ -380,14 +375,15 @@ header{
     width: 80px;
     background-color: rgba(0, 0, 102, 0.85);
     position:relative !important;
-    border: thin solid rgba(232, 232, 232);
+    border: thin solid #fff;
     line-height: normal;
     overflow: hidden;
-    border-bottom-right-radius: 5px;
+
 }
 .thumb-calendar-event:last-child {
     margin-bottom: 0;
 }
+/*
 .thumb-calendar-event:before, .thumb-calendar-event:after {
     display: block;
     position: absolute;
@@ -399,9 +395,9 @@ header{
 }
 .thumb-calendar-event:before {
     border-top: solid 10px transparent;
-    border-right: solid 10px rgba(232, 232, 232);
+    border-right: solid 10px rgba(232, 232, 232,1);
     border-left: solid 10px transparent;
-    border-bottom: solid 10px rgba(232, 232, 232);
+    border-bottom: solid 10px rgba(232, 232, 232,1);
 }
 .thumb-calendar-event:after {
     border-bottom: solid 10px transparent;
@@ -411,7 +407,7 @@ header{
     border-top: solid 10px rgba(0, 0, 102, 1);
     box-shadow: -1px 1px 3px #212835;
 }
-
+*/
 .thumb-calendar-short-date{
     height:0px;
     width: 80px;
@@ -438,8 +434,11 @@ header{
 }
 
 .event-end{
+    position:absolute;
     margin-bottom: 1rem;
     float: right;
+    bottom:0;
+    right:0;
 }
 
 .berita-top{
@@ -453,7 +452,11 @@ header{
 
 .custom-large-end{
     margin-bottom: 1rem;
+    position:absolute;
+    margin-bottom: 1rem;
     float: right;
+    bottom:0;
+    right:0;
 }
 
 .article-end{
@@ -487,8 +490,8 @@ header{
     background-color: #ccc;
 }
 .img-rektor{
-    position:float;
-
+    width: 220px;
+    border-radius: 5px;
 }
 
 /*Moved to responsive media breakpoint*/
@@ -580,6 +583,34 @@ header{
         color: #0275d8;
         font-size: 11pt;
         font-weight: normal;
+    }
+    .large-container-wrapper{
+        min-height: 80vh;
+    }
+    .small-container-wrapper{
+        min-height: 80vh;
+    }
+    
+    .text-quotes-wrapper{
+        background-color: #027fb1;
+        min-height: 150px;
+        overflow: hidden;
+        margin: 3.5rem 0 3.5rem;
+        box-shadow: 0 4px 2px -2px gray;
+    }
+    .belt-wrapper{
+        background-color: #027fb1;
+        min-height: 150px;
+        overflow: hidden;
+        margin: 3.5rem 0 3.5rem;
+        padding-bottom: 1rem;
+        box-shadow: 0 4px 2px -2px gray;
+    }
+    
+    .belt-wrapper-testimoni{
+        background-image: url("../img/kolase-fix.png");
+        background-color: rgba(80, 100, 232, 1);
+        margin-bottom: 3rem;
     }
 }
 
@@ -688,6 +719,30 @@ header{
         font-size: 9pt;
         font-weight: normal;
     }
+    .img-rektor{
+        width: 180px;
+        border-radius: 5px;
+    }
+    .text-quotes-wrapper{
+        background-color: #027fb1;
+        min-height: 150px;
+        overflow: hidden;
+        margin: 1rem 0;
+        box-shadow: 0 4px 2px -2px gray;
+    }
+    .belt-wrapper{
+        background-color: #027fb1;
+        min-height: 150px;
+        overflow: hidden;
+        margin: 1rem 0;
+        padding-bottom: 1rem;
+        box-shadow: 0 4px 2px -2px gray;
+    }
+    
+    .belt-wrapper-testimoni{
+        background-image: url("../img/kolase-fix.png");
+        background-color: rgba(80, 100, 232, 1);
+    }
 }
 
 .link-next{
@@ -744,6 +799,7 @@ header{
 
 .card-text{
     font-size: 10pt;
+    line-height: 1.5;
 }
 
 .card-block-berita{
@@ -782,43 +838,35 @@ header{
     border-top-right-radius: 25px;
 }
 
-.belt-wrapper{
-    background-color: #027fb1;
-    min-height: 150px;
-    overflow: hidden;
-    margin: 1rem 0;
-    padding-bottom: 1rem;
-    box-shadow: 0 4px 2px -2px gray;
-}
-
 .big-link{
-    display: block;
+    display: inline-block;
     text-decoration: none;
-    border: 2px solid #027fb1;
+    border: 2px solid rgba(0, 0, 102, 0.85);
     padding: 0.8rem;
     margin: 0 0.75rem 0.75rem;
     text-align: center;
-    color: #027fb1;
-    border-radius: 15px;
+    color: rgba(0, 0, 102, 0.85);
+    border-radius: 5px;
     background-color:#fff;
     height:110px;
-    width: 110px;
+    width: 120px;
 }
 
 .big-link:hover{
     color: #ffffff;
-    background-color: #027fb1;
+    background-color: rgba(0, 0, 102, 0.85);
 }
 
 .big-link:focus{
     color: #ffffff;
-    background-color: #027fb1;
+    background-color: rgba(0, 0, 102, 0.85);
 }
 
 .big-link span {
     display: inline-block;
     font-size: 9pt;
     margin-top: 5px;
+    padding: 0 0.5rem;
 }
 
 /*This is the beginning of single page styling*/
@@ -868,6 +916,19 @@ header{
 
 .small-sections{
     padding-top: 4rem;
+}
+
+.sidebar-sections{
+    padding-top: 0;
+}
+
+.sidebar-content{
+    font-size: 10pt;
+    line-height: 1.5rem;
+    color: #002020;
+    font-weight: normal;
+    min-height:60vh;
+    padding: 0 0 4rem 0;
 }
 
 .berita-thumb-images{
@@ -1149,11 +1210,11 @@ img.wrap-left {float: left;margin: 0.2rem;}
 
 
 .quote.dark blockquote {
-    background-color: rgba(0, 95, 148, 1);
+    background-color: rgba(0, 75, 128, 0.7);
 }
 
 .quote.dark blockquote:before {
-    border-top-color: rgba(0, 95, 148, 1);
+    border-top-color: rgba(0, 75, 128, 0.7);
 }
 
 .quote-footer {
@@ -1211,7 +1272,7 @@ img.wrap-left {float: left;margin: 0.2rem;}
 /*beginning summernote styling adapted to bootstrap 4*/
 
 .table-bordered{
-    
+
 }
 
 .table-bordered tbody{
@@ -1220,3 +1281,12 @@ img.wrap-left {float: left;margin: 0.2rem;}
 
 /*end summernote styling*/
 
+.middle-centered-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*modify font awesome*/
+.fa-li{
+    left:-1em;
+}

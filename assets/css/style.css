@@ -6,7 +6,7 @@
 html,body{
     min-height:100%;
     background-color: rgba(232, 232, 232,0.2);
-    font-family: Roboto, 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     line-height: 1;
 }
 header{
@@ -271,7 +271,6 @@ header{
 
 .subtitle{
     font-size: 16pt;
-    font-variant-caps: small-caps;
     color: #ffffff;
     text-align: center;
     padding-top: 1rem;
@@ -286,7 +285,6 @@ header{
 
 .berita-title{
     font-size: 16pt;
-    font-variant-caps: small-caps;
     color: rgba(0, 0, 102, 1);
     font-weight: bold;
     border-bottom-style: solid;
@@ -297,7 +295,6 @@ header{
 
 .event-title{
     font-size: 16pt;
-    font-variant-caps: small-caps;
     color: rgba(0, 0, 102, 1);
     font-weight: bold;
     border-bottom-style: solid;
@@ -308,7 +305,6 @@ header{
 
 .article-title{
     font-size: 16pt;
-    font-variant-caps: small-caps;
     color: rgba(0, 0, 102, 1);
     font-weight: bold;
     border-bottom-style: solid;
@@ -319,7 +315,6 @@ header{
 
 .custom-title{
     font-size: 16pt;
-    font-variant-caps: small-caps;
     color: rgba(0, 0, 102, 1);
     font-weight: bold;
     border-bottom-style: solid;
@@ -330,7 +325,6 @@ header{
 
 .custom-large-title{
     font-size: 16pt;
-    font-variant-caps: small-caps;
     color: rgba(0, 0, 102, 1);
     font-weight: bold;
     border-bottom-style: solid;
@@ -413,7 +407,6 @@ header{
     width: 80px;
     color: #fff;
     font-size: 10pt;
-    font-variant: small-caps;
     overflow: visible;
     margin-top: 0;
     margin-bottom: 0;
@@ -873,13 +866,11 @@ header{
 .page-title{
     font-size: 16pt;
     font-weight: bolder;
-    font-variant: small-caps;
     padding: 2rem 0 0 0;
     color: rgba(0, 0, 102, 1);
 }
 .page-title-u{
     font-size: 16pt;
-    font-variant-caps: small-caps;
     color: rgba(0, 0, 102, 1);
     font-weight: bold;
     border-bottom-style: solid;
@@ -890,7 +881,6 @@ header{
 .page-subtitle{
     font-size: 13pt;
     font-weight: bolder;
-    font-variant: small-caps;
     padding:0;
     color: rgba(0, 0, 102, 1);
 }
@@ -898,7 +888,6 @@ header{
 .page-subtitle-u{
     font-size: 13pt;
     font-weight: bolder;
-    font-variant: small-caps;
     padding:0;
     color: rgba(0, 0, 102, 1);
     border-bottom: solid medium rgba(0, 0, 102, 1);
@@ -947,7 +936,6 @@ header{
 .sub-u{
     font-size: 11pt;
     font-weight: normal;
-    font-variant: small-caps;
     padding:0.5rem 0;
     color: rgba(0, 0, 102, 0.45);
     /*    color: rgba(0, 0, 102, 1);*/
@@ -1019,7 +1007,6 @@ header{
     width: 64px;
     color: #fff;
     font-size: 10pt;
-    font-variant: small-caps;
     overflow: visible;
     margin-top: 0;
     margin-bottom: 0;
@@ -1087,7 +1074,6 @@ header{
 }
 
 .fc-center{
-    font-variant: small-caps;
     padding: 2rem 0 0 0;
     color: rgba(0, 0, 102, 1);
 }
