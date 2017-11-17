@@ -16,7 +16,7 @@
                             <img class="img-thumbnail mx-auto d-block" src="<?php $image = json_decode($articledetail['image']); echo $image->url;  ?>" alt="<?php echo $articledetail['judul']; ?>">
                         </div>
                         <!--End of Featured Image-->
-                        <strong><?php echo $articledetail['reporter']; ?> &mdash; </strong><?php echo $articledetail['isi']; ?>
+                        <strong><?php echo $articledetail['reporter']; ?> &mdash; </strong> <div class="rm-content"><?php echo $articledetail['isi']; ?></div>
 <!--                        <div class="row berita-thumb-images">
                             <img class="card-img img-thumbnail" src="http://placehold.it/128x128" alt="Card image">
                             <img class="card-img img-thumbnail" src="http://placehold.it/128x128" alt="Card image">

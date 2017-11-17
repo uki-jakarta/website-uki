@@ -44,6 +44,8 @@
         <script src="<?php echo base_url(); ?>assets/bootstrap/js/bootstrap.js"></script>
         <!-- AOS JS -->
         <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+        <!-- Readmore -->
+        <script src="https://fastcdn.org/Readmore.js/2.1.0/readmore.min.js"></script>
         <?php
         if (isset($additionalJS)) {
             echo $additionalJS;
@@ -78,6 +80,15 @@
                 });
                 $('#back-to-top').tooltip('show');
             });
+            $(function () { /* to make sure the script runs after page load */
+                $('.rm-content').each(function (event) {
+                    $('.rm-content').readmore({
+                        speed: 75,
+                        moreLink: '<div class="middle-centered-container"><a class="link-read-more" href="#">Selengkapnya</a></div>',
+                        lessLink: '<br>'
+                    });
+                });
+            });
         </script>
         <script>
             $(function () {
@@ -85,10 +96,10 @@
                     disable: 'mobile'
                 });
             });
-
             $(window).on('load', function () {
                 AOS.refresh();
             });
+            //$('news-content').readmore();
         </script>
         <!-- Custom Fonts -->
         <style>
@@ -243,9 +254,9 @@
                                             <a class="dropdown-item item-head" href="http://pmb.uki.ac.id/admission/S1/form/setup-online-account">Registrasi  Program S1</a>
                                             <a class="dropdown-item item-head" href="http://pmb.uki.ac.id/admission/S2/form/setup-online-account">Registrasi  Program S2</a>
                                             <a class="dropdown-item item-head disabled" href="#">PROSEDUR LAINNYA</a>
-                                            <a class="dropdown-item item-head" href="#">Prosedur Pengunduran Diri</a>
+                                            <a class="dropdown-item item-head" href="<?php echo base_url(); ?>halaman/index/20171024-prosedur-pendaftaran-pengunduran-diri">Prosedur Pengunduran Diri</a>
                                             <a class="dropdown-item item-head disabled" href="#">INFORMASI LAINNYA</a>
-                                            <a class="dropdown-item item-head" href="http://www1.uki.ac.id/halaman/index/20171024-biaya-kuliah">Biaya Kuliah</a>
+                                            <a class="dropdown-item item-head" href="<?php echo base_url(); ?>halaman/index/20171024-biaya-kuliah">Biaya Kuliah</a>
                                             <!--<a class="dropdown-item item-head disabled" href="#">INFORMASI LAINNYA</a>
                                             <a class="dropdown-item item-head" href="#">Biaya Kuliah</a>
                                             <a class="dropdown-item item-head" href="#">Materi USM</a>

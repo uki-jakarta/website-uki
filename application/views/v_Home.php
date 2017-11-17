@@ -28,7 +28,7 @@
     <!--End Carousel-->
 
     <div class="container-fluid text-quotes-wrapper" data-aos="fade-in-up" data-aos-once="true">
-        <div class="subtitle">Pengumuman</div>
+        <div class="subtitle">PENGUMUMAN</div>
         <div class="text-center p-4">
             <div class="quotes"><?php echo $pengumuman->content; ?></div>
             <div class="quoted-from"><?php echo $pengumuman->author; ?></div>
@@ -117,7 +117,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12">
-                    <div class="subtitle">Pojok Rektor</div>
+                    <div class="subtitle">POJOK REKTOR</div>
                 </div>
             </div>
             <div class="row">
@@ -205,7 +205,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12">
-                    <div class="subtitle">Kata Mereka, Tentang UKI</div>
+                    <div class="subtitle">KATA MEREKA, TENTANG UKI</div>
                 </div>
             </div>
             <div class="row">

@@ -571,7 +571,7 @@ header{
         border-top: none;
         border-left: none;
         border-right: none;
-        border-bottom: 1px dashed rgba(0, 0, 0, 0.125);
+        border-bottom: 01px dashed rgba(0, 0, 0, 0.125);
         padding: 0.75rem 0.75rem 0.25rem;
         color: #0275d8;
         font-size: 11pt;
@@ -583,7 +583,7 @@ header{
     .small-container-wrapper{
         min-height: 80vh;
     }
-    
+
     .text-quotes-wrapper{
         background-color: #027fb1;
         min-height: 150px;
@@ -599,11 +599,26 @@ header{
         padding-bottom: 1rem;
         box-shadow: 0 4px 2px -2px gray;
     }
-    
+
     .belt-wrapper-testimoni{
         background-image: url("../img/kolase-fix.png");
         background-color: rgba(80, 100, 232, 1);
         margin-bottom: 3rem;
+    }
+    .rm-content{
+        overflow: hidden;
+        position: relative;
+    }
+    .rm-content:after{
+        content: "";
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        pointer-events: none;
+        background-image: linear-gradient(to bottom, rgba(255,255,255,0), #eee 90%);
+        width: 100%;
+        height: 4em;
     }
 }
 
@@ -731,11 +746,28 @@ header{
         padding-bottom: 1rem;
         box-shadow: 0 4px 2px -2px gray;
     }
-    
+
     .belt-wrapper-testimoni{
         background-image: url("../img/kolase-fix.png");
         background-color: rgba(80, 100, 232, 1);
     }
+    .rm-content{
+        overflow: hidden;
+        position: relative;
+        padding-bottom: 1rem;
+    }
+    .rm-content:after{
+        content: "";
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        pointer-events: none;
+        background-image: linear-gradient(to bottom, rgba(255,255,255,0), #eee 90%);
+        width: 100%;
+        height: 2em;
+    }
+
 }
 
 .link-next{
@@ -762,6 +794,31 @@ header{
     font-style: oblique;
     border-bottom-right-radius: 25px;
     border-top-right-radius: 25px;
+    text-decoration: none;
+}
+
+.link-read-more{
+    color:rgba(0, 0, 102, 1);
+    font-size: 10pt;
+    font-style: oblique;
+    padding: 0.25rem;
+}
+
+.link-read-more:hover{
+    background-color: rgba(0, 0, 102, 1);
+    color: rgba(254, 254, 254, 1);
+    font-size: 10pt;
+    font-style: oblique;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.link-read-more:focus{
+    background-color: rgba(0, 0, 102, 1);
+    color: rgba(254, 254, 254, 1);
+    font-size: 10pt;
+    font-style: oblique;
+    border-radius: 25px;
     text-decoration: none;
 }
 
@@ -918,6 +975,19 @@ header{
     font-weight: normal;
     min-height:60vh;
     padding: 0 0 4rem 0;
+}
+
+.sidebar-link{
+    background-color: transparent;
+    border: none;
+    padding: 0.75rem 0.75rem 0.25rem;
+    color: rgba(0, 0, 102, 0.85);
+    font-size: 11pt;
+    font-weight: normal;
+}
+
+.sidebar-link:hover, .sidebar-link:focus{
+    text-decoration: none;
 }
 
 .berita-thumb-images{
