@@ -44,8 +44,6 @@
         <script src="<?php echo base_url(); ?>assets/bootstrap/js/bootstrap.js"></script>
         <!-- AOS JS -->
         <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-        <!-- Readmore -->
-        <script src="https://fastcdn.org/Readmore.js/2.1.0/readmore.min.js"></script>
         <?php
         if (isset($additionalJS)) {
             echo $additionalJS;
@@ -80,15 +78,6 @@
                 });
                 $('#back-to-top').tooltip('show');
             });
-            $(function () { /* to make sure the script runs after page load */
-                $('.rm-content').each(function (event) {
-                    $('.rm-content').readmore({
-                        speed: 75,
-                        moreLink: '<div class="middle-centered-container"><a class="link-read-more" href="#">Selengkapnya</a></div>',
-                        lessLink: '<br>'
-                    });
-                });
-            });
         </script>
         <script>
             $(function () {
@@ -96,10 +85,10 @@
                     disable: 'mobile'
                 });
             });
+
             $(window).on('load', function () {
                 AOS.refresh();
             });
-            //$('news-content').readmore();
         </script>
         <!-- Custom Fonts -->
         <style>
@@ -175,7 +164,7 @@
                                             <a class="dropdown-item item-head" href="<?php echo base_url(); ?>halaman/index/20171019-magister-pendidikan-agama-kristen">Pendidikan Agama Kristen</a>
                                             <a class="dropdown-item item-head" href="<?php echo base_url(); ?>halaman/index/20171102-magister-manajemen">Manajemen</a>
                                             <a class="dropdown-item item-head" href="<?php echo base_url(); ?>halaman/index/20171019-magister-teknik-elektro">Teknik Elektro</a>
-                                            <a class="dropdown-item item-head" href="#">Arsitektur</a>
+                                            <a class="dropdown-item item-head" href="<?php echo base_url(); ?>halaman/index/20171117-magister-teknik-arsitektur">Arsitektur</a>
                                         </div>
                                         <div class="col-lg-3 col-sm-12">
                                             <a class="dropdown-item item-head disabled" href="#">PROGRAM SARJANA</a>
@@ -221,7 +210,7 @@
                                             <a class="dropdown-item item-child" href="<?php echo base_url(); ?>halaman/index/20171013-diploma-manajemen-perpajakan">Manajemen Perpajakan</a>
                                             <a class="dropdown-item item-child" href="<?php echo base_url(); ?>halaman/index/20171013-diploma-akuntansi">Akuntansi</a>
                                             <a class="dropdown-item item-head" href="#">Fakultas Sastra</a>
-                                            <a class="dropdown-item item-child" href="#">Bahasa Inggris</a>
+                                            <a class="dropdown-item item-child" href="<?php echo base_url(); ?>halaman/index/20171122-diploma-sastra-inggris">Bahasa Inggris</a>
                                             <a class="dropdown-item item-head disabled" href="#">AKADEMI</a>
                                             <a class="dropdown-item item-head" href="<?php echo base_url(); ?>halaman/index/20171013-akademi-fisioterapi">Akademi Fisioterapi</a>
                                             <a class="dropdown-item item-head" href="<?php echo base_url(); ?>halaman/index/20171013-akademi-perbankan">Akademi Perbankan</a>
