@@ -17,6 +17,19 @@
                         </div>
                         <!--End of Featured Image-->
                         <strong><?php echo $articledetail['reporter']; ?> &mdash; </strong> <div class="rm-content"><?php echo $articledetail['isi']; ?></div>
+                        <?php 
+                            $additionalimages = json_decode($articledetail['additional_image']);
+                        
+                            if (count($additionalimages) > 0) {
+                                echo '<div class="row berita-thumb-images">';
+                                foreach ($additionalimages as $k => $v) {
+                                    echo '<img class="card-img my-img-thumbnail" src="'.$v->url.'" alt="'.$v->caption.'">';
+                                }
+                                echo '</div>';
+                            } 
+                        
+                        ?>
+
 <!--                        <div class="row berita-thumb-images">
                             <img class="card-img img-thumbnail" src="http://placehold.it/128x128" alt="Card image">
                             <img class="card-img img-thumbnail" src="http://placehold.it/128x128" alt="Card image">

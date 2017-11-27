@@ -19,13 +19,20 @@
                     ?>" alt="<?php echo $newsdetail['judul']; ?>">
                 </div>
                 <!--End of Featured Image-->
-                <strong><?php echo $newsdetail['location']; ?>, <?php echo $newsdetail['reporter']; ?> </strong><div class="rm-content"><?php echo $newsdetail['isi']; ?></div><strong>(<?php echo $newsdetail['penulis']; ?>)</strong>
-                <!--                        
-                <div class="row berita-thumb-images">
-                    <img class="card-img img-thumbnail" src="http://placehold.it/128x128" alt="Card image">
-                    <img class="card-img img-thumbnail" src="http://placehold.it/128x128" alt="Card image">
-                    <img class="card-img img-thumbnail" src="http://placehold.it/128x128" alt="Card image">
-                </div>
+                <strong><?php echo $newsdetail['location']; ?>, <?php echo $newsdetail['reporter']; ?> </strong><div class="rm-content"><?php echo $newsdetail['isi']; ?></div><strong>(<?php echo $newsdetail['penulis']; ?>)</strong>                    
+                <?php 
+                    $additionalimages = json_decode($newsdetail['additional_image']);
+                  
+                    if (count($additionalimages) > 0) {
+                        echo '<div class="row berita-thumb-images">';
+                        foreach ($additionalimages as $k => $v) {
+                            echo '<img class="card-img my-img-thumbnail" src="'.$v->url.'" alt="'.$v->caption.'">';
+                        }
+                        echo '</div>';
+                    } 
+                
+                ?>
+                <!--
                 <div class="tags">
                     <ul class="list-unstyled list-inline">
                         <li class="list-inline-item"><a href="#"><span class="tag">Lorem Ipsum</span></a></li>
