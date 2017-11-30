@@ -25,7 +25,9 @@
         <link href="<?php echo base_url(); ?>assets/css/animate.css" rel="stylesheet" type="text/css"/>
         <!-- AOS -->
         <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-		
+	<!-- Lightbox -->
+        <link href="<?php echo base_url(); ?>assets/lightbox/css/lightbox.css" rel="stylesheet" type="text/css"/>
+        
         <?php
         if (isset($additionalCSS)) {
             echo $additionalCSS;
@@ -46,6 +48,8 @@
         <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
         <!-- Readmore -->
         <script src="https://fastcdn.org/Readmore.js/2.1.0/readmore.min.js"></script>
+        <!-- Lightbox -->
+        <script src="<?php echo base_url(); ?>assets/lightbox/js/lightbox.js"></script>
         <?php
         if (isset($additionalJS)) {
             echo $additionalJS;

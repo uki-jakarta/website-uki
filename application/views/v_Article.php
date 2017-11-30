@@ -23,7 +23,7 @@
                             if (count($additionalimages) > 0) {
                                 echo '<div class="row berita-thumb-images">';
                                 foreach ($additionalimages as $k => $v) {
-                                    echo '<img class="card-img my-img-thumbnail" src="'.$v->url.'" alt="'.$v->caption.'">';
+                                    echo '<a href="'.$v->url.'" data-lightbox="'.$newsdetail['id_artikel'].'" data-title="'.$v->caption.'"><img class="card-img my-img-thumbnail" src="'.$v->url.'" alt="'.$v->caption.'"></a>';
                                 }
                                 echo '</div>';
                             } 
