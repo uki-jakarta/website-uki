@@ -489,6 +489,11 @@ header{
 
 /*Moved to responsive media breakpoint*/
 @media (min-width: 992px) {
+    .additional-img-thumbnail {
+        width : 16.6vw;
+		padding: 0 1rem;
+		display:flex;
+    }
     .item-berita-title{
         font-size: 11pt;
         font-weight: normal;
@@ -608,6 +613,7 @@ header{
     .rm-content{
         overflow: hidden;
         position: relative;
+        padding-bottom: 1.8rem;
     }
     .rm-content:after{
         content: "";
@@ -623,6 +629,10 @@ header{
 }
 
 @media (min-width: 280px) and (max-width:990px) {
+    .additional-img-thumbnail {
+        width : 27vw;
+		display: flex;
+    }
     .item-berita-title{
         font-size: 9pt;
         color:rgba(0, 0, 102, 1);

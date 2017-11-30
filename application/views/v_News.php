@@ -26,7 +26,7 @@
                     if (count($additionalimages) > 0) {
                         echo '<div class="row berita-thumb-images">';
                         foreach ($additionalimages as $k => $v) {
-                            echo '<img class="card-img my-img-thumbnail" src="'.$v->url.'" alt="'.$v->caption.'">';
+                            echo '<a href="'.$v->url.'" data-lightbox="'.$newsdetail['id_berita'].'" data-title="'.$v->caption.'"><img class="card-img img-thumbnail additional-img-thumbnail" src="'.$v->url.'" alt="'.$v->caption.'"></a>';
                         }
                         echo '</div>';
                     } 
@@ -60,7 +60,7 @@
                     echo '<a href="' . base_url('berita/list_berita/') . $recentnews[$i]['slug'] . '" class="item-berita-title">' . $recentnews[$i]['judul'] . '</a>';
                     echo '<div class="text-muted item-berita-subtitle">last updated ' . date('d-m-Y', strtotime($recentnews[$i]['tanggal_edit'])) . '</div>';
                     echo '</div>';
-                    echo '<img class="my-img-thumbnail card-img img-thumbnail" src="' . $image->url . '" alt="IMAGE">';
+                    echo '<img class="card-img my-img-thumbnail" src="' . $image->url . '" alt="image">';
                     echo '</li>';
                 }
                 ?>
