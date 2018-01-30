@@ -153,7 +153,7 @@
                     for ($i = 0; $i < 3; $i++) {
                         $image = json_decode($artikel[$i]['image']);
                         $cardArtikel .= '<div class="card sharp-card" data-aos="zoom-in-up" data-aos-duration="700" data-aos-delay="'.($i*200).'" data-aos-once="true">';
-                        $cardArtikel .= '<img class="img-fluid card-img-top-sharp" src="' . base_url(str_replace('./', '', $image->url)) . '" alt="">';
+                        $cardArtikel .= '<img class="img-fluid card-img-top-sharp" src="'.$image->url. '" alt="">';
                         $cardArtikel .= '<div class="card-block card-block-berita">';
                         $cardArtikel .= '<a class="item-berita-title" href="' . base_url('/artikel/list_artikel/' . $artikel[$i]['slug']) . '">' . $artikel[$i]['judul'] . '</a>';
                         $cardArtikel .= '<div class="text-muted item-berita-subtitle">last updated ' . date('d-m-Y', strtotime($artikel[$i]['tanggal_edit'])) . '</div>';
