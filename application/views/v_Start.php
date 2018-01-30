@@ -244,9 +244,9 @@
                                     <div class="row">
                                         <div class="col-lg-6 col-sm-12">
                                             <a class="dropdown-item item-head disabled" href="#">JADWAL REGISTRASI</a>
-                                            <a class="dropdown-item item-head" href="<?php echo base_url(); ?>halaman/index/20171013-jadwal-registrasi-fakultas-kedokteran">Fakultas Kedokteran</a>
-                                            <a class="dropdown-item item-head" href="<?php echo base_url(); ?>halaman/index/20171013-jadwal-registrasi-non-fakultas-kedokteran">Non-Fakultas Kedokteran</a>
-                                            <a class="dropdown-item item-head" href="<?php echo base_url(); ?>halaman/index/20171013-jadwal-registrasi-program-pascasarjana">Pascasarjana</a>
+                                            <a class="dropdown-item item-head" href="<?php echo base_url(); ?>halaman/index/20171013-penerimaan-mahasiswa-baru-tahun-ajaran-20182019-fakultas-kedokteran">Fakultas Kedokteran</a>
+                                            <a class="dropdown-item item-head" href="<?php echo base_url(); ?>halaman/index/20171013-penerimaan-mahasiswa-baru-tahun-ajaran-20182019-non-fakultas-kedokteran">Non-Fakultas Kedokteran</a>
+                                            <a class="dropdown-item item-head" href="<?php echo base_url(); ?>halaman/index/20171013-penerimaan-mahasiswa-baru-tahun-ajaran-20182019-program-pascasarjana">Pascasarjana</a>
                                             <a class="dropdown-item item-head" href="#">Persyaratan Registrasi</a>
                                             <div class="dropdown-divider"></div>
                                             <a class="dropdown-item item-child" href="<?php echo base_url(); ?>halaman/index/20171013-mahasiswa-jalur-umum">Mahasiswa Jalur Umum</a>
