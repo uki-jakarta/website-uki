@@ -117,7 +117,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12">
-                    <div class="subtitle">POJOK REKTOR</div>
+                    <div class="subtitle">REKTOR DESK</div>
                 </div>
             </div>
             <div class="row">
