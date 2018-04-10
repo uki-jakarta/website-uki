@@ -24,7 +24,7 @@ class Informasi extends CI_Controller {
             $date = strtotime($arrayslug[0]);
             $slugtitle = substr($slug, 9);
             $informationdetail = $this->INFORMATION->get_information_details($slugtitle, date('Y-m-d', $date));
-            
+            $meta['page_title'] = $informationdetail['judul'];
             foreach ($informationdetail['informasi_var'] as $k => $v) {
 				$informationdetail[$v['var_nama']] = $v['var_value'];
             }
@@ -43,7 +43,7 @@ class Informasi extends CI_Controller {
                 'informationdetail' => $informationdetail,
                 'recentinformations' => $recentinformations
             );
-            $this->load->view('v_Start');
+            $this->load->view('v_Start',$meta);
             $this->load->view('v_Information', $data);
             $this->load->view('v_End');
         } else {
