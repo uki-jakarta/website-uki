@@ -44,9 +44,9 @@
                 <div class="social-media-sharing">
                     <div class="sub-u">Share via</div>
                     <ul class="list-unstyled list-inline">
-                        <li class="list-inline-item"><a href="<?php echo $newsdetail['facebook']; ?>"  rel="nofollow"><i class="fa fa-facebook-official fa-2x mod-facebook" aria-hidden="true"></i></a></li>
-                        <li class="list-inline-item"><a href="<?php echo $newsdetail['twitter']; ?>" rel="nofollow"><i class="fa fa-twitter fa-2x mod-twitter" aria-hidden="true"></i></a></li>
-                        <li class="list-inline-item"><a href="<?php echo $newsdetail['mail']; ?>" rel="nofollow"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></a></li>
+                        <li class="list-inline-item"><a href="<?php echo "https://www.facebook.com/sharer/sharer.php?u=".rawurlencode(base_url('/berita/list_berita/' . $newsdetail['slug'])); ?>"  rel="nofollow"><i class="fa fa-facebook-official fa-2x mod-facebook" aria-hidden="true"></i></a></li>
+                        <li class="list-inline-item"><a href="<?php echo "https://twitter.com/intent/tweet?url=".base_url('/berita/list_berita/' . $newsdetail['slug'])."&text=".$newsdetail['judul'].""; ?>" rel="nofollow"><i class="fa fa-twitter fa-2x mod-twitter" aria-hidden="true"></i></a></li>
+                        <li class="list-inline-item"><a href="<?php echo "mailto:?subject=".$newsdetail['judul']."&body=Check out this site ".base_url('/berita/list_berita/' . $newsdetail['slug']); ?>" rel="nofollow"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
             </div>
