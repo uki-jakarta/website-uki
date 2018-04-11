@@ -28,6 +28,10 @@ class Event extends CI_Controller {
             foreach ($eventdetail['event_var'] as $k => $v) {
                 $eventdetail[$v['var_nama']] = $v['var_value'];
             }
+            //open graph meta
+            $meta['og_url'] = rawurlencode(base_url('/event/list_event/' . $eventdetail['slug']));
+            $meta['og_desc'] = substr(strip_tags($eventdetail['isi']),0,300);
+            //$meta['og_img'] = json_decode($eventdetail['image'])->url;
             unset($eventdetail['event_var']);
 
             //fetch start time, end time, start date and end date

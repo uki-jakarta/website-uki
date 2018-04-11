@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html>
     <head>
+
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="UKI merupakan salah satu universitas unggul dalam bidang pendidikan, penelitian, pengabdian dan pelayanan kepada masyarakat di Indonesia dan Asia sesuai dengan nilai-nilai kristiani. Berlokasi di jantung kota Jakarta menjadikannya salah satu Universitas dengan akses terbaik.">
         <meta name="author" content="Unit Pengembangan Sistem Informasi Universitas Kristen Indonesia">
         <meta name="keywords" content="universitas, universitas kristen, universitas kristen indonesia, uki, cawang, universitas terbaik, universitas unggul, kedokteran, ekonomi, manajemen, pendidikan, hukum, akuntansi, indonesia, pps, program, program pascasarjana, doctoral">
+        <meta property="og:url" content="
+        <?php
+        if (isset($og_url)) {
+            echo $og_url;
+        } else {
+            echo base_url();
+        }
+        ?>"/>
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="
+        <?php
+        if (isset($page_title)) {
+            echo $page_title;
+        } else {
+            echo "UNIVERSITAS KRISTEN INDONESIA";
+        }
+        ?>"/>
+        <meta property="og:description" content="
+        <?php
+        if (isset($og_desc)) {
+            echo $og_desc;
+        } else {
+            echo "UKI merupakan salah satu universitas unggul dalam bidang pendidikan, penelitian, pengabdian dan pelayanan kepada masyarakat di Indonesia dan Asia sesuai dengan nilai-nilai kristiani. Berlokasi di jantung kota Jakarta menjadikannya salah satu Universitas dengan akses terbaik.";
+        }
+        ?>"/>
+        <meta property="og:image" content="
+        <?php
+        if (isset($og_img)) {
+            echo $og_img;
+        } else {
+            echo base_url()."assets/img/logo.png";
+        }
+        ?>
+        "/>
         <title><?php
             if (isset($page_title)) {
                 echo $page_title;
@@ -25,9 +60,9 @@
         <link href="<?php echo base_url(); ?>assets/css/animate.css" rel="stylesheet" type="text/css"/>
         <!-- AOS -->
         <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-	<!-- Lightbox -->
+        <!-- Lightbox -->
         <link href="<?php echo base_url(); ?>assets/lightbox/css/lightbox.css" rel="stylesheet" type="text/css"/>
-        
+
         <?php
         if (isset($additionalCSS)) {
             echo $additionalCSS;
@@ -57,6 +92,12 @@
         ?>
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103026398-1"></script>
+
+        <!-- Google Tag Manager -->
+        <!--<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async= true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script',' dataLayer','GTM-PMFWBMX');
+        </script>
+        <!-- End Google Tag Manager -->
+
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag() {
@@ -84,7 +125,7 @@
                 });
                 $('#back-to-top').tooltip('show');
             });
-			$(function () { /* to make sure the script runs after page load */
+            $(function () { /* to make sure the script runs after page load */
                 $('.rm-content').each(function (event) {
                     $('.rm-content').readmore({
                         speed: 75,
@@ -115,6 +156,10 @@
         </style>
     </head>
     <body>
+        <!-- Google Tag Manager (noscript) -->
+        <!--<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PMFWBMX"
+        height="0" width="0" style="display:none; visibility:hidden"></iframe></ noscript>
+        <!-- End Google Tag Manager (noscript) -->
         <header>
             <!-- Sub Header -->
             <div class="subheader">

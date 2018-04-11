@@ -28,6 +28,11 @@ class Berita extends CI_Controller {
             foreach ($newsdetail['berita_var'] as $k => $v) {
                 $newsdetail[$v['var_nama']] = $v['var_value'];
             }
+            //open graph meta
+            $meta['og_url'] = rawurlencode(base_url('/berita/list_berita/' . $newsdetail['slug']));
+            $meta['og_desc'] = substr(strip_tags($newsdetail['isi']),0,300);
+            $meta['og_img'] = json_decode($newsdetail['image'])->url;
+            
             unset($newsdetail['berita_var']);
 
             $recentnews = $this->NEWS->get_recent_news(5);

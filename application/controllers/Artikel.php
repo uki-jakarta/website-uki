@@ -28,6 +28,9 @@ class Artikel extends CI_Controller {
             foreach ($articledetail['artikel_var'] as $k => $v) {
                 $articledetail[$v['var_nama']] = $v['var_value'];
             }
+            $meta['og_url'] = rawurlencode(base_url('/artikel/list_artikel/' . $articledetail['slug']));
+            $meta['og_desc'] = substr(strip_tags($articledetail['isi']),0,300);
+            $meta['og_img'] = json_decode($articledetail['image'])->url;
             unset($articledetail['artikel_var']);
 
             $recentarticles = $this->ARTICLE->get_recent_articles(5);
