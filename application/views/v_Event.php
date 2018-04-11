@@ -33,9 +33,9 @@ if (isset($image->url))
                 <div class="social-media-sharing">
                     <div class="sub-u">Share via</div>
                     <ul class="list-unstyled list-inline">
-                        <li class="list-inline-item"><a href="<?php echo "https://www.facebook.com/sharer.php?u=" . base_url('/event/list_event/' . $eventdetail['slug']) . ""; ?>"  rel="nofollow"><i class="fa fa-facebook-official fa-2x mod-facebook" aria-hidden="true"></i></a></li>
-                        <li class="list-inline-item"><a href="<?php echo "https://twitter.com/intent/tweet?url=" . base_url('/event/list_event/' . $eventdetail['slug']) . "&text=" . $eventdetail['judul'] . ""; ?>" rel="nofollow"><i class="fa fa-twitter fa-2x mod-twitter" aria-hidden="true"></i></a></li>
-                        <li class="list-inline-item"><a href="<?php echo "mailto:?subject=" . $eventdetail['judul'] . "&body=Check out this site " . base_url('/event/list_event/' . $eventdetail['slug']); ?>" rel="nofollow"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></a></li>
+                        <li class="list-inline-item"><a href="<?php echo "https://www.facebook.com/sharer.php?u=" . base_url('/event/list_event/' . $dataEvent['slug']) . ""; ?>"  rel="nofollow"><i class="fa fa-facebook-official fa-2x mod-facebook" aria-hidden="true"></i></a></li>
+                        <li class="list-inline-item"><a href="<?php echo "https://twitter.com/intent/tweet?url=" . base_url('/event/list_event/' . $dataEvent['slug']) . "&text=" . $dataEvent['judul'] . ""; ?>" rel="nofollow"><i class="fa fa-twitter fa-2x mod-twitter" aria-hidden="true"></i></a></li>
+                        <li class="list-inline-item"><a href="<?php echo "mailto:?subject=" . $dataEvent['judul'] . "&body=Check out this site " . base_url('/event/list_event/' . $dataEvent['slug']); ?>" rel="nofollow"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
             </div>
