@@ -29,9 +29,13 @@ class Event extends CI_Controller {
                 $eventdetail[$v['var_nama']] = $v['var_value'];
             }
             //open graph meta
-            $meta['og_url'] = rawurlencode(base_url('/event/list_event/' . $eventdetail['slug']));
-            $meta['og_desc'] = substr(strip_tags($eventdetail['isi']),0,300);
-            //$meta['og_img'] = json_decode($eventdetail['image'])->url;
+            $meta['og_url'] = base_url('/event/list_event/' . $eventdetail['slug']);
+            $meta['og_desc'] = substr(strip_tags($eventdetail['isi']), 0, 300);
+            if (isset($eventdetail['image'])) {
+                $meta['og_img'] = json_decode($eventdetail['image'])->url;
+            } else {
+                $meta['og_img'] = "";
+            }
             unset($eventdetail['event_var']);
 
             //fetch start time, end time, start date and end date
