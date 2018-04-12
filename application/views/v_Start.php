@@ -40,8 +40,7 @@
         } else {
             echo base_url()."assets/img/logo.png";
         }
-        ?>
-        "/>
+        ?>"/>
         <title><?php
             if (isset($page_title)) {
                 echo $page_title;
@@ -367,10 +366,10 @@
                             <a class="nav-link menulink" href="<?php echo base_url(); ?>halaman/index/20171018-beasiswa">Beasiswa</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menulink" href="#" onclick="return false;">Mahasiswa</a>
+                            <a class="nav-link menulink" href="<?php echo base_url(); ?>halaman/index/20180410-kegiatan-kemahasiswaan">Mahasiswa</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link menulink" href="#" onclick="return false;">Fasilitas Kampus</a>
+                            <a class="nav-link menulink" href="<?php echo base_url(); ?>halaman/index/20171110-fasilitas-kampus">Fasilitas Kampus</a>
                         </li>
                         <!--<li class="nav-item">
                             <a class="nav-link menulink" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>

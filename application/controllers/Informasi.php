@@ -28,9 +28,13 @@ class Informasi extends CI_Controller {
             foreach ($informationdetail['informasi_var'] as $k => $v) {
 				$informationdetail[$v['var_nama']] = $v['var_value'];
             }
-            $meta['og_url'] = rawurlencode(base_url('/informasi/list_informasi/' . $informationdetail['slug']));
+            $meta['og_url'] = base_url('/informasi/list_informasi/' . $informationdetail['slug']);
             $meta['og_desc'] = substr(strip_tags($informationdetail['isi']),0,300);
-            //$meta['og_img'] = json_decode($informationdetail['image'])->url;
+            if (isset($informationdetail['image'])) {
+                $meta['og_img'] = json_decode($informationdetail['image'])->url;
+            } else {
+                $meta['og_img'] = "";
+            }
             unset($informationdetail['informasi_var']);
 
             $recentinformations = $this->INFORMATION->get_recent_informations(5);
