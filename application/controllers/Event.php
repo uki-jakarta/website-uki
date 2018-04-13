@@ -31,10 +31,10 @@ class Event extends CI_Controller {
             //open graph meta
             $meta['og_url'] = base_url('/event/list_event/' . $eventdetail['slug']);
             $meta['og_desc'] = substr(strip_tags($eventdetail['isi']), 0, 300);
-            if (isset($eventdetail['image'])) {
+            if (isset(json_decode($eventdetail['image'])->url)) {
                 $meta['og_img'] = json_decode($eventdetail['image'])->url;
             } else {
-                $meta['og_img'] = "";
+                $meta['og_img'] = base_url()."assets/img/logo.png";
             }
             unset($eventdetail['event_var']);
 
