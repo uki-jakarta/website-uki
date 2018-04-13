@@ -30,10 +30,10 @@ class Informasi extends CI_Controller {
             }
             $meta['og_url'] = base_url('/informasi/list_informasi/' . $informationdetail['slug']);
             $meta['og_desc'] = substr(strip_tags($informationdetail['isi']),0,300);
-            if (isset($informationdetail['image'])) {
+            if (isset( json_decode($informationdetail['image'])->url)) {
                 $meta['og_img'] = json_decode($informationdetail['image'])->url;
             } else {
-                $meta['og_img'] = "";
+                $meta['og_img'] = base_url()."assets/img/logo.png";
             }
             unset($informationdetail['informasi_var']);
 
