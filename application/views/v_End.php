@@ -30,7 +30,7 @@
                 <div class="card-block middle-centered-container">
                     <ul class="list-unstyled">
                         <li><a href="#" class="sublink-text-inverse">Biro Administrasi Akedemik</a></li>
-                        <li><a href="#" class="sublink-text-inverse">UPT Perpustakaan</a></li>
+                        <li><a href="http://perpustakaan.uki.ac.id" class="sublink-text-inverse">UPT Perpustakaan</a></li>
                         <li><a href="#" class="sublink-text-inverse">Biro Administrasi Umum</a></li>
                         <li><a href="#" class="sublink-text-inverse">Biro Sumber Daya Manusia</a></li>
                         <li><a href="#" class="sublink-text-inverse">Biro Keuangan dan Akuntansi</a></li>
